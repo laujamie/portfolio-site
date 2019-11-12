@@ -1,0 +1,46 @@
+body {
+  font-family: "Segoe UI";
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  &#home {
+    overflow: hidden;
+
+    .greeting {
+      padding-top: 20vh;
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    padding: 0.2rem 1rem;
+  }
+}
+
+footer {
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5vh;
+  background: #2196f3;
+  vertical-align: center;
+
+  p {
+    color: white;
+  }
+}
