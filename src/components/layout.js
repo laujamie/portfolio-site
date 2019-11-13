@@ -26,7 +26,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <div id="app">
-        <header></header>
+        <header>
+          <Header></Header>
+        </header>
         <main id="home">{children}</main>
         <footer>
           <p>© Jamie Lau {new Date().getFullYear()}</p>
