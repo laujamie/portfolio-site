@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{RXBc:function(e,a,t){"use strict";t.r(a);var n=t("q1tI"),r=t.n(n),i=t("Bl7J"),l=t("vrFN");a.default=function(){return r.a.createElement(i.a,null,r.a.createElement(l.a,{description:"Portfolio website for Jamie Lau.",lang:"en",title:"Home"}),r.a.createElement("div",{className:"greeting"},r.a.createElement("h2",{className:"sm-header"},"Hi, my name is"),r.a.createElement("h1",{className:"lg-header"},"Jamie Lau")))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-5d5377d2541e28ab9508.js.map
