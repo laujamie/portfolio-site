@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => {
     <Appbar>
       <Toolbar>
         <Typography variant="h6">
-          <Link to="/" color="inherit">
+          <Link to="/" color="inherit" className="headerLink">
             {siteTitle}
           </Link>
         </Typography>
