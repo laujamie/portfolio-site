@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
     <>
       <div id="app">
         <header>
-          <Header></Header>
+          <Header siteTitle={data.site.siteMetadata.title}></Header>
         </header>
         <main id="home">{children}</main>
         <footer>
