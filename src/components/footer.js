@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Paper, Grid, Typography } from "@material-ui/core"
+import { Container, Grid, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles({
@@ -14,7 +14,6 @@ const useStyles = makeStyles({
     left: 0,
     bottom: 0,
     right: 0,
-    backgroundColor: "primary",
   },
 })
 
@@ -23,7 +22,7 @@ const Footer = props => {
 
   return (
     <div id="footer">
-      <Paper className={classes.footer} square="true">
+      <Container className={classes.footer}>
         <Grid container>
           <Grid container item sm={8}>
             <Typography>Hello</Typography>
@@ -32,7 +31,7 @@ const Footer = props => {
             <Typography>World!</Typography>
           </Grid>
         </Grid>
-      </Paper>
+      </Container>
     </div>
   )
 }
