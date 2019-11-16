@@ -11,5 +11,5 @@ deploy:
   on:
     branch: master
 
-dist: trusty
+dist: bionic
 sudo: false
