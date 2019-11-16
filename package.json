@@ -9,6 +9,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
     "@material-ui/core": "^4.6.1",
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
@@ -23,7 +24,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-fontawesome": "^1.7.1",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
