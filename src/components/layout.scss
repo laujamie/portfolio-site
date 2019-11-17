@@ -11,21 +11,6 @@ main {
   }
 }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400;
-
-  &.lg-heading {
-    font-size: 6rem;
-  }
-
-  &.sm-heading {
-    padding: 0.2rem 1rem;
-  }
-}
-
 .headerLink:hover {
   text-decoration: none;
 }
