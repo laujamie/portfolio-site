@@ -20,7 +20,11 @@ export default function HTML(props) {
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
-          This app works best with JavaScript enabled.
+          For full functionality of this site it is necessary to enable
+          JavaScript. Here are the{" "}
+          <a href="https://www.enable-javascript.com/">
+            instructions how to enable JavaScript in your web browser
+          </a>
         </noscript>
         <div
           key={`body`}
