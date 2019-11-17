@@ -1,27 +1,74 @@
 import React from "react"
 
-import { Button } from "@material-ui/core"
+import { Button, Container, Grid, Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
 
 import GithubIcon from "../components/github"
 import LinkedinIcon from "../components/linkedin"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO
-      description="Portfolio website for Jamie Lau."
-      lang="en"
-      title="Home"
-    />
-    <div className="greeting">
-      <h2 className="sm-header">Hi, my name is</h2>
-      <h1 className="lg-header">Jamie Lau</h1>
-      <GithubIcon />
-      <LinkedinIcon />
-      <Button color="primary">Learn More</Button>
-    </div>
-  </Layout>
-)
+const useStyles = makeStyles({
+  landing: {
+    height: "85vh",
+  },
+  greeting: {
+    fontSize: "3rem",
+    display: "inline",
+  },
+})
+
+const IndexPage = () => {
+  const classes = useStyles()
+
+  return (
+    <Layout>
+      <SEO
+        description="Portfolio website for Jamie Lau."
+        lang="en"
+        title="Home"
+      />
+      <Container className={classes.landing}>
+        <Grid container align-items="center" spacing={2}>
+          <Grid item xs={12}>
+            <Typography className={classes.greeting} variant="h2">
+              Hi, my name is
+            </Typography>
+            <Typography
+              className={classes.greeting}
+              variant="h1"
+              color="primary"
+            >
+              &nbsp;Jamie Lau
+            </Typography>
+          </Grid>
+          <Grid container item xs={12}>
+            <Grid item xs={3} sm={3} lg={1}>
+              <a
+                href="https://github.com/laujamie"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <GithubIcon />
+              </a>
+            </Grid>
+            <Grid item xs={3} sm={3} lg={1}>
+              <a
+                href="https://linkedin.com/in/laujamie5"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <LinkedinIcon />
+              </a>
+            </Grid>
+          </Grid>
+          <Grid container item xs={12}>
+            <Button variant="contained" color="secondary">
+              Learn More
+            </Button>
+          </Grid>
+        </Grid>
+      </Container>
+    </Layout>
+  )
+}
 
 export default IndexPage

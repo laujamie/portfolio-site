@@ -10,10 +10,11 @@ const useStyles = makeStyles({
   footer: {
     padding: 0,
     position: "absolute",
-    textAlign: "center",
     left: 0,
-    bottom: 0,
     right: 0,
+  },
+  footerCol: {
+    textAlign: "center",
   },
 })
 
@@ -24,11 +25,16 @@ const Footer = props => {
     <div id="footer">
       <Container className={classes.footer}>
         <Grid container>
-          <Grid container item sm={8}>
-            <Typography>Hello</Typography>
+          <Grid container item sm={8} xs={12} className={classes.footerCol}>
+            <Typography variant="h5">Hello</Typography>
           </Grid>
-          <Grid container item sm={4}>
+          <Grid container item sm={4} xs={12} className={classes.footerCol}>
             <Typography>World!</Typography>
+          </Grid>
+          <Grid container item xs={12}>
+            <Typography>
+              &#169;&nbsp;Jamie&nbsp;Lau&nbsp;{new Date().getFullYear()}
+            </Typography>
           </Grid>
         </Grid>
       </Container>
