@@ -16,6 +16,9 @@ const useStyles = makeStyles({
     fontSize: "3rem",
     display: "inline",
   },
+  greetingFirst: {
+    paddingTop: "20vh",
+  },
 })
 
 const IndexPage = () => {
@@ -29,7 +32,12 @@ const IndexPage = () => {
         title="Home"
       />
       <Container className={classes.landing}>
-        <Grid container align-items="center" spacing={2}>
+        <Grid
+          container
+          align-items="center"
+          spacing={2}
+          className={classes.greetingFirst}
+        >
           <Grid item xs={12}>
             <Typography className={classes.greeting} variant="h2">
               Hi, my name is
@@ -42,20 +50,14 @@ const IndexPage = () => {
               &nbsp;Jamie Lau
             </Typography>
           </Grid>
-          <Grid container item xs={12}>
+          <Grid container item xs={12} className="icons">
             <Grid item xs={3} sm={3} lg={1}>
-              <a
-                href="https://github.com/laujamie"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
+              <a href="https://github.com/laujamie" className="icon">
                 <GithubIcon />
               </a>
             </Grid>
             <Grid item xs={3} sm={3} lg={1}>
-              <a
-                href="https://linkedin.com/in/laujamie5"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
+              <a href="https://linkedin.com/in/laujamie5" className="icon">
                 <LinkedinIcon />
               </a>
             </Grid>
