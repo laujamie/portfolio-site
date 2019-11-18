@@ -25,6 +25,11 @@ const IndexPage = () => {
               &nbsp;Jamie Lau
             </Typography>
           </Grid>
+          <Grid container item xs={12}>
+            <Typography id="greeting" variant="h2">
+              I'm a software developer.
+            </Typography>
+          </Grid>
           <Grid container item xs={12} className="icons">
             <Grid item xs={3} sm={3} lg={1}>
               <a href="https://github.com/laujamie" className="icon">

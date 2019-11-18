@@ -23,7 +23,7 @@ a.icon {
   color: #000000;
 
   &:hover {
-    color: orange;
+    color: #ffc107;
     @include easeOut;
   }
 }

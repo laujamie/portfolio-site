@@ -33,7 +33,8 @@ const Footer = props => {
           </Grid>
           <Grid container item xs={12}>
             <Typography>
-              &#169;&nbsp;Jamie&nbsp;Lau&nbsp;{new Date().getFullYear()}
+              &#169;&nbsp;Copyright&nbsp;Jamie&nbsp;Lau&nbsp;
+              {new Date().getFullYear()}
             </Typography>
           </Grid>
         </Grid>
