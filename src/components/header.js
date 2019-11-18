@@ -1,7 +1,7 @@
 import Link from "./link"
 import PropTypes from "prop-types"
 import React from "react"
-import { fade, makeStyles } from "@material-ui/core/styles"
+import Button from "@material-ui/core/Button"
 import Appbar from "@material-ui/core/AppBar"
 import Typography from "@material-ui/core/Typography"
 import Toolbar from "@material-ui/core/Toolbar"
@@ -30,13 +30,17 @@ HideOnScroll.propTypes = {
 const Header = ({ siteTitle }) => {
   return (
     <HideOnScroll props={siteTitle}>
-      <Appbar>
+      <Appbar id="navbar">
         <Toolbar>
-          <Typography variant="h2" id="logo">
+          <Typography variant="h2" id="logo" noWrap>
             <Link to="/" color="inherit" className="headerLink">
               {siteTitle}
             </Link>
           </Typography>
+          <div style={{ flexGrow: 1 }} />
+          <Button color="inherit" href="#about">
+            About Me
+          </Button>
         </Toolbar>
       </Appbar>
     </HideOnScroll>

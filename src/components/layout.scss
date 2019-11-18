@@ -2,6 +2,10 @@
   transition: all 0.4s ease-out;
 }
 
+#navbar {
+  flex-grow: 1;
+}
+
 main {
   padding: 4rem;
   height: 100%;
@@ -48,10 +52,14 @@ h2 {
 
 div {
   &#landing {
-    height: 85vh;
+    height: 93vh;
   }
 
   &#greeting-grid {
     padding-top: 20vh;
+  }
+
+  &#about-me {
+    height: 100vh;
   }
 }

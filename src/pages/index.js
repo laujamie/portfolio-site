@@ -32,12 +32,20 @@ const IndexPage = () => {
           </Grid>
           <Grid container item xs={12} className="icons">
             <Grid item xs={3} sm={3} lg={1}>
-              <a href="https://github.com/laujamie" className="icon">
+              <a
+                href="https://github.com/laujamie"
+                className="icon"
+                target="_blank"
+              >
                 <GithubIcon />
               </a>
             </Grid>
             <Grid item xs={3} sm={3} lg={1}>
-              <a href="https://linkedin.com/in/laujamie5" className="icon">
+              <a
+                href="https://linkedin.com/in/laujamie5"
+                className="icon"
+                target="_blank"
+              >
                 <LinkedinIcon />
               </a>
             </Grid>
@@ -46,6 +54,15 @@ const IndexPage = () => {
             <Button variant="contained" color="secondary">
               Learn More
             </Button>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container id="about-me">
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography variant="h2" id="about">
+              About Me
+            </Typography>
           </Grid>
         </Grid>
       </Container>
