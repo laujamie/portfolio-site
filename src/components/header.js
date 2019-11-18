@@ -8,16 +8,6 @@ import Toolbar from "@material-ui/core/Toolbar"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
 import Slide from "@material-ui/core/Slide"
 
-const useStyles = makeStyles(theme => ({
-  grow: {
-    flexGrow: 1,
-  },
-  logoText: {
-    fontSize: "1.5rem",
-    textDecoration: "none",
-  },
-}))
-
 const HideOnScroll = props => {
   const { children, window } = props
 
@@ -38,13 +28,11 @@ HideOnScroll.propTypes = {
 }
 
 const Header = ({ siteTitle }) => {
-  const classes = useStyles()
-
   return (
     <HideOnScroll props={siteTitle}>
       <Appbar>
         <Toolbar>
-          <Typography variant="h2" className={classes.logoText}>
+          <Typography variant="h2" id="logo">
             <Link to="/" color="inherit" className="headerLink">
               {siteTitle}
             </Link>

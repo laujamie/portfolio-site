@@ -1,29 +1,13 @@
 import React from "react"
 
 import { Button, Container, Grid, Typography } from "@material-ui/core"
-import { makeStyles } from "@material-ui/core/styles"
 
 import GithubIcon from "../components/github"
 import LinkedinIcon from "../components/linkedin"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const useStyles = makeStyles({
-  landing: {
-    height: "85vh",
-  },
-  greeting: {
-    fontSize: "3rem",
-    display: "inline",
-  },
-  greetingFirst: {
-    paddingTop: "20vh",
-  },
-})
-
 const IndexPage = () => {
-  const classes = useStyles()
-
   return (
     <Layout>
       <SEO
@@ -31,22 +15,13 @@ const IndexPage = () => {
         lang="en"
         title="Home"
       />
-      <Container className={classes.landing}>
-        <Grid
-          container
-          align-items="center"
-          spacing={2}
-          className={classes.greetingFirst}
-        >
+      <Container id="landing">
+        <Grid container align-items="center" spacing={2} id="greeting-grid">
           <Grid item xs={12}>
-            <Typography className={classes.greeting} variant="h2">
+            <Typography id="greeting" variant="h2">
               Hi, my name is
             </Typography>
-            <Typography
-              className={classes.greeting}
-              variant="h1"
-              color="primary"
-            >
+            <Typography id="greeting" variant="h1" color="primary">
               &nbsp;Jamie Lau
             </Typography>
           </Grid>
