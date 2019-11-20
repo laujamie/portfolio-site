@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Container, Grid, Typography } from "@material-ui/core"
-import { makeStyles } from "@material-ui/core/styles"
+import { useTheme, makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles({
   flex: {
@@ -20,6 +20,7 @@ const useStyles = makeStyles({
 
 const Footer = props => {
   const classes = useStyles()
+  const theme = useTheme()
 
   return (
     <div id="footer">
@@ -31,10 +32,15 @@ const Footer = props => {
           <Grid container item sm={4} xs={12} className={classes.footerCol}>
             <Typography>World!</Typography>
           </Grid>
-          <Grid container item xs={12}>
-            <Typography>
-              &#169;&nbsp;Copyright&nbsp;Jamie&nbsp;Lau&nbsp;
-              {new Date().getFullYear()}
+          <Grid
+            container
+            item
+            xs={12}
+            style={{ backgroundColor: theme.palette.primary.main }}
+          >
+            <Typography color="inherit">
+              &#169;&nbsp;Copyright&nbsp;{new Date().getFullYear()}
+              &nbsp;Jamie&nbsp;Lau
             </Typography>
           </Grid>
         </Grid>

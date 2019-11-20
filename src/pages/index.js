@@ -36,6 +36,7 @@ const IndexPage = () => {
                 href="https://github.com/laujamie"
                 className="icon"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <GithubIcon />
               </a>
@@ -45,6 +46,7 @@ const IndexPage = () => {
                 href="https://linkedin.com/in/laujamie5"
                 className="icon"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <LinkedinIcon />
               </a>
@@ -60,7 +62,7 @@ const IndexPage = () => {
       <Container id="about-me">
         <Grid container>
           <Grid item xs={12}>
-            <Typography variant="h2" id="about">
+            <Typography variant="h2" id="about" style={{ paddingTop: "1rem" }}>
               About Me
             </Typography>
           </Grid>
