@@ -31,7 +31,12 @@ const IndexPage = () => {
             </Typography>
           </Grid>
           <Grid container item xs={12} className="icons">
-            <Grid item xs={3} sm={3} lg={1}>
+            <Grid item xs={3} sm={2} lg={1}>
+              <Button color="primary" variant="outlined">
+                Resume
+              </Button>
+            </Grid>
+            <Grid item xs={3} sm={2} lg={1}>
               <a
                 href="https://github.com/laujamie"
                 className="icon"
@@ -41,7 +46,7 @@ const IndexPage = () => {
                 <GithubIcon />
               </a>
             </Grid>
-            <Grid item xs={3} sm={3} lg={1}>
+            <Grid item xs={3} sm={2} lg={1}>
               <a
                 href="https://linkedin.com/in/laujamie5"
                 className="icon"
@@ -54,7 +59,7 @@ const IndexPage = () => {
           </Grid>
           <Grid container item xs={12}>
             <Button variant="contained" color="secondary">
-              Learn More
+              My Work
             </Button>
           </Grid>
         </Grid>
@@ -62,8 +67,30 @@ const IndexPage = () => {
       <Container id="about-me">
         <Grid container>
           <Grid item xs={12}>
-            <Typography variant="h2" id="about" style={{ paddingTop: "1rem" }}>
+            <Typography variant="h2" id="about" style={{ paddingTop: "3vh" }}>
               About Me
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            style={{
+              paddingTop: "2vh",
+            }}
+          >
+            <Typography>
+              I am an Honours Statistics and Computational Mathematics student
+              at the University of Waterloo with a passion for learning and
+              developing quality code.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container id="projects">
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography variant="h2" id="project-header">
+              Projects
             </Typography>
           </Grid>
         </Grid>

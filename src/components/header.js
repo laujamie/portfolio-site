@@ -46,6 +46,9 @@ const Header = ({ siteTitle }) => {
           <Button color="inherit" href="#about">
             About Me
           </Button>
+          <Button color="inherit" href="#projects">
+            Projects
+          </Button>
         </Toolbar>
       </Appbar>
     </HideOnScroll>

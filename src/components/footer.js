@@ -38,7 +38,7 @@ const Footer = props => {
             xs={12}
             style={{ backgroundColor: theme.palette.primary.main }}
           >
-            <Typography color="inherit">
+            <Typography color="white">
               &#169;&nbsp;Copyright&nbsp;{new Date().getFullYear()}
               &nbsp;Jamie&nbsp;Lau
             </Typography>
