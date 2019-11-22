@@ -28,6 +28,13 @@ const Layout = ({ children }) => {
           title
         }
       }
+      file(relativePath: { eq: "images/developer.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 

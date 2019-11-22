@@ -7,7 +7,7 @@ import LinkedinIcon from "../components/linkedin"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+const IndexPage = props => {
   return (
     <Layout>
       <SEO
@@ -31,11 +31,6 @@ const IndexPage = () => {
             </Typography>
           </Grid>
           <Grid container item xs={12} className="icons">
-            <Grid item xs={3} sm={2} lg={1}>
-              <Button color="primary" variant="outlined">
-                Resume
-              </Button>
-            </Grid>
             <Grid item xs={3} sm={2} lg={1}>
               <a
                 href="https://github.com/laujamie"
@@ -65,7 +60,7 @@ const IndexPage = () => {
         </Grid>
       </Container>
       <Container id="about-me">
-        <Grid container>
+        <Grid container spacing={3} alignItems="center">
           <Grid item xs={12}>
             <Typography variant="h2" id="about" style={{ paddingTop: "3vh" }}>
               About Me
@@ -78,11 +73,24 @@ const IndexPage = () => {
               paddingTop: "2vh",
             }}
           >
-            <Typography>
+            <Typography variant="body1" style={{ fontSize: "1.5rem" }}>
               I am an Honours Statistics and Computational Mathematics student
               at the University of Waterloo with a passion for learning and
               developing quality code.
             </Typography>
+          </Grid>
+          <Grid item zeroMinWidth>
+            <Typography variant="body1" style={{ fontSize: "1.5rem" }}>
+              When I'm not busy doing schoolwork, I enjoy working on amazing
+              projects and continually learning new technologies.
+            </Typography>
+          </Grid>
+          <Grid container item xs={12}>
+            <Grid item xs={3} sm={2} lg={1}>
+              <Button color="primary" variant="outlined">
+                Resume
+              </Button>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

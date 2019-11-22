@@ -43,10 +43,10 @@ const Header = ({ siteTitle }) => {
             </Link>
           </Typography>
           <div style={{ flexGrow: 1 }} />
-          <Button color="inherit" href="#about">
+          <Button color="inherit" href="/#about">
             About Me
           </Button>
-          <Button color="inherit" href="#projects">
+          <Button color="inherit" href="/#projects">
             Projects
           </Button>
         </Toolbar>

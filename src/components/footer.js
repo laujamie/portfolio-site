@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     position: "absolute",
     left: 0,
     right: 0,
+    textAlign: "center",
   },
   footerCol: {
     textAlign: "center",
@@ -26,18 +27,7 @@ const Footer = props => {
     <div id="footer">
       <Container className={classes.footer}>
         <Grid container>
-          <Grid container item sm={8} xs={12} className={classes.footerCol}>
-            <Typography variant="h5">Hello</Typography>
-          </Grid>
-          <Grid container item sm={4} xs={12} className={classes.footerCol}>
-            <Typography>World!</Typography>
-          </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            style={{ backgroundColor: theme.palette.primary.main }}
-          >
+          <Grid container item xs={12} style={{ textAlign: "center" }}>
             <Typography color="white">
               &#169;&nbsp;Copyright&nbsp;{new Date().getFullYear()}
               &nbsp;Jamie&nbsp;Lau
