@@ -10,10 +10,15 @@ const ProjectTemplate = ({ data }) => {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <Container>
-        <Grid container>
+      <Container spacing={1} style={{ height: "95vh" }}>
+        <Grid container style={{ paddingTop: "10vh" }}>
           <Grid item xs={12}>
-            <Typography variant="h1">{frontmatter.title}</Typography>
+            <Typography variant="h1" style={{ fontSize: "3rem" }}>
+              {frontmatter.title}
+            </Typography>
+          </Grid>
+          <Grid item xs={12} style={{ paddingTop: "2vh" }}>
+            <Typography variant="body1">{frontmatter.description}</Typography>
           </Grid>
         </Grid>
       </Container>
@@ -31,6 +36,7 @@ export const pageQuery = graphql`
         title
         source
         preview
+        description
       }
     }
   }
