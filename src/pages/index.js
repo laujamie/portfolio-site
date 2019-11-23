@@ -53,7 +53,7 @@ const IndexPage = props => {
             </Grid>
           </Grid>
           <Grid container item xs={12}>
-            <Button variant="contained" color="secondary">
+            <Button variant="contained" color="secondary" href="/#projects">
               My Work
             </Button>
           </Grid>

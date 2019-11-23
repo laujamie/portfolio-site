@@ -16,7 +16,7 @@ const NotFoundPage = () => (
       </Typography>
       <Typography variant="h4" style={{ paddingTop: "3vh" }}>
         {" "}
-        <Link to="/" color="inherit">
+        <Link to="/" color="inherit" style={{ fontWeight: "100" }}>
           Return home
         </Link>
       </Typography>

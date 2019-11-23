@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Container, Grid, Typography } from "@material-ui/core"
-import { useTheme, makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles({
   flex: {
@@ -21,14 +21,13 @@ const useStyles = makeStyles({
 
 const Footer = props => {
   const classes = useStyles()
-  const theme = useTheme()
 
   return (
     <div id="footer">
       <Container className={classes.footer}>
         <Grid container>
           <Grid container item xs={12} style={{ textAlign: "center" }}>
-            <Typography color="white">
+            <Typography>
               &#169;&nbsp;Copyright&nbsp;{new Date().getFullYear()}
               &nbsp;Jamie&nbsp;Lau
             </Typography>

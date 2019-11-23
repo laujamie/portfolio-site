@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import { Container, Grid, Typography } from "@material-ui/core"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
