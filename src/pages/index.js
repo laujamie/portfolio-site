@@ -6,6 +6,7 @@ import GithubIcon from "../components/github"
 import LinkedinIcon from "../components/linkedin"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ContactForm from "../components/contact-form"
 
 const IndexPage = props => {
   return (
@@ -103,6 +104,7 @@ const IndexPage = props => {
           </Grid>
         </Grid>
       </Container>
+      <ContactForm></ContactForm>
     </Layout>
   )
 }
