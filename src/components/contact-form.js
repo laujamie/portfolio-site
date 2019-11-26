@@ -14,7 +14,7 @@ const ContactForm = props => {
     <Paper>
       <Container>
         <Typography variant="h1">Contact Me</Typography>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autoComplete="off">
           <Grid container spacing={1}>
             <Grid item xs={12}>
               <TextField
@@ -30,6 +30,7 @@ const ContactForm = props => {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                type="email"
                 id="standard-full-width"
                 fullWidth
                 label="Email"
