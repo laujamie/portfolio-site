@@ -3,6 +3,8 @@ import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
+import Grid from "@material-ui/core/Grid"
+import Paper from "@material-ui/core/Paper"
 
 class ContactForm extends Component {
   handleSubmit(e) {
@@ -11,15 +13,47 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <Container>
-        <Typography variant="h1">Contact Me</Typography>
-        <form onSubmit={this.handleSubmit}>
-          <TextField id="standard-basic" label="First Name"></TextField>
-          <TextField id="standard-basic" label="Last Name"></TextField>
-          <TextField id="standard-basic" label="Email"></TextField>
-          <Button type="Submit">Submit</Button>
-        </form>
-      </Container>
+      <Paper>
+        <Container>
+          <Typography variant="h1">Contact Me</Typography>
+          <form onSubmit={this.handleSubmit}>
+            <Grid container spacing={1}>
+              <Grid item xs={12}>
+                <TextField
+                  id="standard-full-width"
+                  fullWidth
+                  label="Name"
+                  placeholder="John Doe"
+                  InputLabelProps={{ shrink: true }}
+                ></TextField>
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  id="standard-full-width"
+                  fullWidth
+                  label="Email"
+                  placeholder="email@example.com"
+                  InputLabelProps={{ shrink: true }}
+                ></TextField>
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  id="standard-full-width"
+                  fullWidth
+                  label="Message"
+                  placeholder="Hello World!"
+                  InputLabelProps={{ shrink: true }}
+                ></TextField>
+              </Grid>
+              <Grid item xs={12}>
+                <Button type="Submit" color="primary" variant="contained">
+                  Submit
+                </Button>
+              </Grid>
+            </Grid>
+          </form>
+        </Container>
+      </Paper>
     )
   }
 }
