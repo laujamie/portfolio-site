@@ -22,6 +22,9 @@ const ContactForm = props => {
                 fullWidth
                 label="Name"
                 placeholder="John Doe"
+                name="name"
+                value={inputs.name}
+                onChange={handleInputChange}
                 InputLabelProps={{ shrink: true }}
               ></TextField>
             </Grid>
@@ -30,7 +33,10 @@ const ContactForm = props => {
                 id="standard-full-width"
                 fullWidth
                 label="Email"
+                name="email"
                 placeholder="email@example.com"
+                value={inputs.email}
+                onChange={handleInputChange}
                 InputLabelProps={{ shrink: true }}
               ></TextField>
             </Grid>
@@ -39,12 +45,15 @@ const ContactForm = props => {
                 id="standard-full-width"
                 fullWidth
                 label="Message"
+                name="message"
                 placeholder="Hello World!"
+                value={inputs.message}
+                onChange={handleInputChange}
                 InputLabelProps={{ shrink: true }}
               ></TextField>
             </Grid>
             <Grid item xs={12}>
-              <Button type="Submit" color="primary" variant="contained">
+              <Button type="submit" color="primary" variant="contained">
                 Submit
               </Button>
             </Grid>
