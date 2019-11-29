@@ -5,6 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+import "./layout.scss"
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -15,7 +16,6 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 import Footer from "./footer"
 import Header from "./header"
 import theme from "./theme"
-import "./layout.scss"
 import { ThemeProvider } from "@material-ui/core/styles"
 
 library.add(fab)
