@@ -19,7 +19,7 @@ const ContactForm = props => {
   const classes = useStyles()
 
   return (
-    <Paper elevate="10" className={classes.contactForm}>
+    <Paper elevate="10" className={{ root: classes.contactForm }}>
       <Container>
         <Typography variant="h2" id="contact-header">
           Contact Me
