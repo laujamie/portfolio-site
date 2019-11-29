@@ -7,7 +7,7 @@ const useContactForm = callback => {
     if (event) {
       event.preventDefault()
     }
-    callback()
+    console.log(JSON.stringify(inputs))
   }
 
   const handleInputChange = event => {

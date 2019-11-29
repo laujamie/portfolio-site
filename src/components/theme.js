@@ -7,6 +7,11 @@ const baseTheme = createMuiTheme({
     primary: blue,
     secondary: amber,
   },
+  typography: {
+    h2: {
+      fontSize: "3rem",
+    },
+  },
   overrides: {
     Link: {
       underline: {
