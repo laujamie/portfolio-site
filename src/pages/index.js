@@ -1,7 +1,6 @@
 import React from "react"
-
+import { useStaticQuery, graphql } from "gatsby"
 import { Button, Container, Grid, Typography } from "@material-ui/core"
-
 import GithubIcon from "../components/github"
 import LinkedinIcon from "../components/linkedin"
 import Layout from "../components/layout"
@@ -12,7 +11,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO
-        description="Portfolio website for Jamie Lau."
+        description="Hi, my name is Jamie and I am a passionate software developer currently studying at the University of Waterloo!"
         lang="en"
         title="Home"
       />
