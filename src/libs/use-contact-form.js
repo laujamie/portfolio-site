@@ -10,10 +10,7 @@ const useContactForm = callback => {
     setInputs({})
   }
 
-  const handleSubmit = async event => {
-    if (event) {
-      event.preventDefault()
-    }
+  const handleSubmitHelper = async event => {
     const response = await fetch(
       "https://uy3ver4rzk.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
       {
@@ -26,14 +23,27 @@ const useContactForm = callback => {
       }
     )
     const myJSON = await response.json()
-    if (myJSON.target.status === 200) {
+    return myJSON
+  }
+
+  const postSubmit = data => {
+    if (data.target.status === 200) {
       handleClearForm()
       console.log("Success!")
     } else {
       console.log(
-        "Failed because of: " + JSON.parse(myJSON.target.response).message
+        "Failed because of: " + JSON.parse(data.target.response).message
       )
     }
+  }
+
+  const handleSubmit = event => {
+    if (event) {
+      event.preventDefault()
+    }
+    handleSubmitHelper(event)
+      .then(data => postSubmit(data))
+      .catch(reason => console.log(reason.message))
   }
 
   const handleInputChange = event => {
