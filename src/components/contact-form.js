@@ -1,5 +1,4 @@
 import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
 import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
@@ -8,18 +7,16 @@ import Grid from "@material-ui/core/Grid"
 import Paper from "@material-ui/core/Paper"
 import useContactForm from "../libs/use-contact-form"
 
-const useStyles = makeStyles({
-  contactForm: {
-    marginTop: "1.5rem",
-  },
-})
-
 const ContactForm = props => {
-  const { inputs, handleInputChange, handleSubmit } = useContactForm()
-  const classes = useStyles()
+  const {
+    inputs,
+    handleInputChange,
+    handleSubmit,
+    handleClearForm,
+  } = useContactForm()
 
   return (
-    <Paper elevate="10" className={{ root: classes.contactForm }}>
+    <Paper elevate="10">
       <Container>
         <Typography variant="h2" id="contact-header">
           Contact Me
@@ -68,13 +65,23 @@ const ContactForm = props => {
                 InputLabelProps={{ shrink: true }}
               ></TextField>
             </Grid>
-            <Grid item xs={12}>
+            <Grid container item xs={12}>
               <Button type="submit" color="primary" variant="contained">
                 Submit
+              </Button>
+              <Button
+                onClick={handleClearForm}
+                color="secondary"
+                variant="contained"
+              >
+                Reset
               </Button>
             </Grid>
           </Grid>
         </form>
+        <Grid item xs={12} style={{ display: "none", visibility: "hidden" }}>
+          <Typography variant="body1"></Typography>
+        </Grid>
       </Container>
     </Paper>
   )

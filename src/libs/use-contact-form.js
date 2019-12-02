@@ -3,6 +3,13 @@ import React, { useState } from "react"
 const useContactForm = callback => {
   const [inputs, setInputs] = useState({})
 
+  const handleClearForm = event => {
+    if (event) {
+      event.preventDefault()
+    }
+    setInputs({})
+  }
+
   const handleSubmit = async event => {
     if (event) {
       event.preventDefault()
@@ -12,13 +19,21 @@ const useContactForm = callback => {
       {
         method: "POST",
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(inputs),
       }
     )
     const myJSON = await response.json()
-    console.log(JSON.stringify(myJSON))
+    if (myJSON.target.status === 200) {
+      handleClearForm()
+      console.log("Success!")
+    } else {
+      console.log(
+        "Failed because of: " + JSON.parse(myJSON.target.response).message
+      )
+    }
   }
 
   const handleInputChange = event => {
@@ -28,7 +43,7 @@ const useContactForm = callback => {
       [event.target.name]: event.target.value,
     }))
   }
-  return { inputs, handleSubmit, handleInputChange }
+  return { inputs, handleSubmit, handleInputChange, handleClearForm }
 }
 
 export default useContactForm
