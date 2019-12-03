@@ -3,6 +3,7 @@ module.exports = {
     title: `Jamie Lau`,
     description: `A portfolio website built with Gatsby by Jamie Lau.`,
     author: `@laujamie`,
+    siteUrl: "https://jamielau.me",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,11 +38,12 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        trackingId: "UA-153689443-1",
+        id: "GTM-THGBFZW",
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
