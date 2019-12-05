@@ -10,11 +10,7 @@ import ContactForm from "../components/contact-form"
 const IndexPage = props => {
   return (
     <Layout>
-      <SEO
-        description="Hi, my name is Jamie and I am a passionate software developer currently studying at the University of Waterloo!"
-        lang="en"
-        title="Home"
-      />
+      <SEO lang="en" title="Home" />
       <Container id="landing">
         <Grid container align-items="center" spacing={2} id="greeting-grid">
           <Grid item xs={12}>
@@ -76,7 +72,7 @@ const IndexPage = props => {
             <Typography variant="body1" style={{ fontSize: "1.5rem" }}>
               I am an Honours Statistics and Computational Mathematics student
               at the University of Waterloo with a passion for learning and
-              developing quality code.
+              developing quality software.
             </Typography>
           </Grid>
           <Grid item zeroMinWidth>
