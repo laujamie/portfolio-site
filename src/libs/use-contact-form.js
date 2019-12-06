@@ -27,7 +27,7 @@ const useContactForm = callback => {
   }
 
   const postSubmit = data => {
-    if (data.target.status === 200) {
+    if (data.status === 200) {
       handleClearForm()
       console.log("Success!")
     } else {
