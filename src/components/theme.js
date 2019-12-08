@@ -8,6 +8,12 @@ const baseTheme = createMuiTheme({
     secondary: amber,
   },
   typography: {
+    h1: {
+      fontFamily: "'Nunuto', sans-serif",
+      fontSize: "3.5rem",
+      fontWeight: "600",
+      letterSpacing: "-0.045em",
+    },
     h2: {
       fontSize: "3rem",
     },

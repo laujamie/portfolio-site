@@ -8,6 +8,10 @@ import Layout from "../components/layout"
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
+  const description = Array(frontmatter.description).map(
+    (description, index) => <li key={index}>{description}</li>
+  )
   return (
     <Layout>
       <Container spacing={1} style={{ height: "95vh" }}>
@@ -18,7 +22,7 @@ const ProjectTemplate = ({ data }) => {
             </Typography>
           </Grid>
           <Grid item xs={12} style={{ paddingTop: "2vh" }}>
-            <Typography variant="body1">{frontmatter.description}</Typography>
+            <ul>{description}</ul>
           </Grid>
         </Grid>
       </Container>

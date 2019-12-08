@@ -17,7 +17,7 @@ const IndexPage = props => {
             <Typography id="greeting" variant="h2">
               Hi, my name is
             </Typography>
-            <Typography id="greeting" variant="h1" color="primary">
+            <Typography id="greeting" variant="h2" color="primary">
               &nbsp;Jamie Lau
             </Typography>
           </Grid>
@@ -26,8 +26,15 @@ const IndexPage = props => {
               I'm a software developer.
             </Typography>
           </Grid>
-          <Grid container item xs={12} className="icons">
-            <Grid item xs={3} sm={2} lg={1}>
+          <Grid
+            container
+            alignItems="center"
+            item
+            xs={12}
+            spacing={8}
+            className="icons"
+          >
+            <Grid item>
               <a
                 href="https://github.com/laujamie"
                 className="icon"
@@ -37,7 +44,7 @@ const IndexPage = props => {
                 <GithubIcon />
               </a>
             </Grid>
-            <Grid item xs={3} sm={2} lg={1}>
+            <Grid item>
               <a
                 href="https://linkedin.com/in/laujamie5"
                 className="icon"
@@ -47,10 +54,15 @@ const IndexPage = props => {
                 <LinkedinIcon />
               </a>
             </Grid>
+            <Grid item>
+              <Button color="primary" variant="outlined" size="small">
+                Resume
+              </Button>
+            </Grid>
           </Grid>
           <Grid container item xs={12}>
-            <Button variant="contained" color="secondary" href="/#projects">
-              My Work
+            <Button variant="contained" color="secondary" href="/#about-me">
+              About Me
             </Button>
           </Grid>
         </Grid>
@@ -80,13 +92,6 @@ const IndexPage = props => {
               When I'm not busy doing schoolwork, I enjoy working on amazing
               projects and continually learning new technologies.
             </Typography>
-          </Grid>
-          <Grid container item xs={12}>
-            <Grid item xs={3} sm={2} lg={1}>
-              <Button color="primary" variant="outlined">
-                Resume
-              </Button>
-            </Grid>
           </Grid>
         </Grid>
       </Container>
