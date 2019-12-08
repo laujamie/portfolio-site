@@ -22,18 +22,13 @@ const useContactForm = callback => {
         body: JSON.stringify(inputs),
       }
     )
-    const myJSON = await response.json()
-    return myJSON
+    const res = await response
+    return res
   }
 
   const postSubmit = data => {
     if (data.status === 200) {
       handleClearForm()
-      console.log("Success!")
-    } else {
-      console.log(
-        "Failed because of: " + JSON.parse(data.target.response).message
-      )
     }
   }
 

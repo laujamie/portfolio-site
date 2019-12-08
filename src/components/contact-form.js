@@ -18,69 +18,79 @@ const ContactForm = props => {
   return (
     <Paper elevate="10">
       <Container>
-        <Typography variant="h2" id="contact-header">
-          Contact Me
-        </Typography>
-        <form onSubmit={handleSubmit} autoComplete="off">
-          <Grid item container xs={12} spacing={2}>
-            <Grid item xs={12} md={6}>
-              <TextField
-                id="standard-full-width"
-                fullWidth
-                required
-                label="Name"
-                placeholder="Your Name"
-                name="name"
-                value={inputs.name || ""}
-                onChange={handleInputChange}
-                InputLabelProps={{ shrink: true }}
-              ></TextField>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TextField
-                type="email"
-                id="standard-full-width"
-                fullWidth
-                required
-                label="Email"
-                placeholder="email@example.com"
-                name="email"
-                value={inputs.email || ""}
-                onChange={handleInputChange}
-                InputLabelProps={{ shrink: true }}
-              ></TextField>
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                id="standard-full-width"
-                fullWidth
-                required
-                label="Message"
-                placeholder="Hello World!"
-                name="message"
-                multiline
-                rowsMax="4"
-                value={inputs.message || ""}
-                onChange={handleInputChange}
-                InputLabelProps={{ shrink: true }}
-              ></TextField>
-            </Grid>
-            <Grid container item xs={12}>
-              <Button type="submit" color="primary" variant="contained">
-                Submit
-              </Button>
-              <Button
-                onClick={handleClearForm}
-                color="secondary"
-                variant="contained"
-              >
-                Reset
-              </Button>
-            </Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography variant="h2" id="contact-header">
+              Contact Me
+            </Typography>
           </Grid>
-        </form>
-        <Grid item xs={12} style={{ display: "none", visibility: "hidden" }}>
-          <Typography variant="body1"></Typography>
+          <Grid item container xs={12}>
+            <form onSubmit={handleSubmit} autoComplete="off">
+              <Grid item container xs={12} spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    id="standard-full-width"
+                    fullWidth
+                    required
+                    label="Name"
+                    placeholder="Your Name"
+                    name="name"
+                    value={inputs.name || ""}
+                    onChange={handleInputChange}
+                    InputLabelProps={{ shrink: true }}
+                  ></TextField>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    type="email"
+                    id="standard-full-width"
+                    fullWidth
+                    required
+                    label="Email"
+                    placeholder="email@example.com"
+                    name="email"
+                    value={inputs.email || ""}
+                    onChange={handleInputChange}
+                    InputLabelProps={{ shrink: true }}
+                  ></TextField>
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    id="standard-full-width"
+                    fullWidth
+                    required
+                    label="Message"
+                    placeholder="Hello World!"
+                    name="message"
+                    multiline
+                    rowsMax="4"
+                    value={inputs.message || ""}
+                    onChange={handleInputChange}
+                    InputLabelProps={{ shrink: true }}
+                  ></TextField>
+                </Grid>
+                <Grid container item xs={12} spacing={2}>
+                  <Grid item>
+                    <Button type="submit" color="primary" variant="contained">
+                      Submit
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button
+                      onClick={handleClearForm}
+                      color="secondary"
+                      variant="contained"
+                    >
+                      Reset
+                    </Button>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </form>
+          </Grid>
+          <Grid item xs={12} style={{ display: "none", visibility: "hidden" }}>
+            <Typography variant="body1"></Typography>
+          </Grid>
         </Grid>
       </Container>
     </Paper>
