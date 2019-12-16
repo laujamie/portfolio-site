@@ -10,6 +10,7 @@ import useContactForm from "../libs/use-contact-form"
 const ContactForm = props => {
   const {
     inputs,
+    disabled,
     handleInputChange,
     handleSubmit,
     handleClearForm,
@@ -71,7 +72,12 @@ const ContactForm = props => {
                 </Grid>
                 <Grid container item xs={12} spacing={2}>
                   <Grid item>
-                    <Button type="submit" color="primary" variant="contained">
+                    <Button
+                      type="submit"
+                      color="primary"
+                      variant="contained"
+                      disabled={disabled}
+                    >
                       Submit
                     </Button>
                   </Grid>

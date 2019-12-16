@@ -2,6 +2,7 @@ import React, { useState } from "react"
 
 const useContactForm = callback => {
   const [inputs, setInputs] = useState({})
+  const [disabled, setDisabled] = useState(false)
 
   const handleClearForm = event => {
     if (event) {
@@ -30,12 +31,14 @@ const useContactForm = callback => {
     if (data.status === 200) {
       handleClearForm()
     }
+    setDisabled(false)
   }
 
   const handleSubmit = event => {
     if (event) {
       event.preventDefault()
     }
+    setDisabled(true)
     handleSubmitHelper(event)
       .then(data => postSubmit(data))
       .catch(reason => console.log(reason.message))
@@ -48,7 +51,7 @@ const useContactForm = callback => {
       [event.target.name]: event.target.value,
     }))
   }
-  return { inputs, handleSubmit, handleInputChange, handleClearForm }
+  return { inputs, disabled, handleSubmit, handleInputChange, handleClearForm }
 }
 
 export default useContactForm
