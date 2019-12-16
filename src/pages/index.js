@@ -12,7 +12,13 @@ const IndexPage = props => {
     <Layout>
       <SEO lang="en" title="Home" />
       <Container id="landing">
-        <Grid container align-items="center" spacing={2} id="greeting-grid">
+        <Grid
+          container
+          align-items="center"
+          spacing={2}
+          id="greeting-grid"
+          alignItems="center"
+        >
           <Grid item xs={12}>
             <Typography id="greeting" variant="h2">
               Hi, my name is
@@ -22,13 +28,18 @@ const IndexPage = props => {
             </Typography>
           </Grid>
           <Grid container item xs={12}>
-            <Typography id="greeting" variant="h2">
+            <Typography
+              id="greeting"
+              variant="h2"
+              style={{ fontWeight: "300" }}
+            >
               I'm a software developer.
             </Typography>
           </Grid>
           <Grid
             container
             alignItems="center"
+            alignContent="center"
             item
             xs={12}
             spacing={8}
@@ -76,19 +87,19 @@ const IndexPage = props => {
           </Grid>
           <Grid
             item
-            xs={12}
+            xs={10}
             style={{
               paddingTop: "2vh",
             }}
           >
-            <Typography variant="body1" style={{ fontSize: "1.5rem" }}>
+            <Typography variant="body1">
               I am an Honours Statistics and Computational Mathematics student
               at the University of Waterloo with a passion for learning and
               developing quality software.
             </Typography>
           </Grid>
-          <Grid item zeroMinWidth>
-            <Typography variant="body1" style={{ fontSize: "1.5rem" }}>
+          <Grid item xs={10}>
+            <Typography variant="body1">
               When I'm not busy doing schoolwork, I enjoy working on amazing
               projects and continually learning new technologies.
             </Typography>
