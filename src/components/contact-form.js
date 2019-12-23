@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
@@ -97,6 +98,10 @@ const ContactForm = props => {
       </Grid>
     </Grid>
   )
+}
+
+ContactForm.propTypes = {
+  classes: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(ContactForm)
