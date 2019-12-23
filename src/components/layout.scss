@@ -11,10 +11,6 @@ main {
 
   &#home {
     overflow: hidden;
-
-    .greeting {
-      padding-top: 20vh;
-    }
   }
 }
 
@@ -30,7 +26,6 @@ a.icon {
 h1,
 h2 {
   &#greeting {
-    font-size: 3rem;
     display: inline;
   }
 }
@@ -50,7 +45,7 @@ div {
     padding-top: 20vh;
   }
 
-  &#about-me {
-    height: 40rem;
+  &#home {
+    margin: 0 0.5rem;
   }
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Button, Container, Grid, Typography } from "@material-ui/core"
+import { Button, Grid, Typography } from "@material-ui/core"
 import GithubIcon from "../components/github"
 import LinkedinIcon from "../components/linkedin"
 import Layout from "../components/layout"
@@ -11,13 +11,15 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO lang="en" title="Home" />
-      <Container id="landing">
+      <Grid container spacing={3} id="home">
         <Grid
           container
-          align-items="center"
-          spacing={2}
-          id="greeting-grid"
+          item
+          xs={12}
           alignItems="center"
+          alignContent="center"
+          spacing={1}
+          id="landing"
         >
           <Grid item xs={12}>
             <Typography id="greeting" variant="h2">
@@ -27,24 +29,10 @@ const IndexPage = props => {
               &nbsp;Jamie Lau
             </Typography>
           </Grid>
-          <Grid container item xs={12}>
-            <Typography
-              id="greeting"
-              variant="h2"
-              style={{ fontWeight: "300" }}
-            >
-              I'm a software developer.
-            </Typography>
+          <Grid item xs={12}>
+            <Typography variant="h4">I'm a software developer.</Typography>
           </Grid>
-          <Grid
-            container
-            alignItems="center"
-            alignContent="center"
-            item
-            xs={12}
-            spacing={8}
-            className="icons"
-          >
+          <Grid container item xs={12} spacing={2}>
             <Grid item>
               <a
                 href="https://github.com/laujamie"
@@ -66,56 +54,55 @@ const IndexPage = props => {
               </a>
             </Grid>
             <Grid item>
-              <Button color="primary" variant="outlined" size="small">
+              <Button color="primary" variant="outlined">
                 Resume
               </Button>
             </Grid>
           </Grid>
-          <Grid container item xs={12}>
-            <Button variant="contained" color="secondary" href="/#about-me">
-              About Me
-            </Button>
-          </Grid>
         </Grid>
-      </Container>
-      <Container id="about-me">
-        <Grid container spacing={3} alignItems="center">
-          <Grid item xs={12}>
-            <Typography variant="h2" id="about" style={{ paddingTop: "3vh" }}>
+        <Grid container item xs={12}>
+          <Grid container item xs={12}>
+            <Typography variant="h2" id="about">
               About Me
             </Typography>
           </Grid>
           <Grid
+            container
             item
-            xs={10}
+            spacing={1}
             style={{
-              paddingTop: "2vh",
+              paddingTop: "0.5rem",
             }}
           >
-            <Typography variant="body1">
-              I am an Honours Statistics and Computational Mathematics student
-              at the University of Waterloo with a passion for learning and
-              developing quality software.
-            </Typography>
-          </Grid>
-          <Grid item xs={10}>
-            <Typography variant="body1">
-              When I'm not busy doing schoolwork, I enjoy working on amazing
-              projects and continually learning new technologies.
-            </Typography>
+            <Grid item xs={10}>
+              <Typography variant="body1">
+                I am an Honours Statistics and Computational Mathematics student
+                at the University of Waterloo with a passion for learning and
+                developing quality software.
+              </Typography>
+            </Grid>
+            <Grid item xs={10}>
+              <Typography variant="body1">
+                When I'm not busy doing schoolwork, I enjoy working on amazing
+                projects and continually learning new technologies.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
-      </Container>
-      <Container id="projects">
-        <Grid container>
+        <Grid container item xs={12}>
           <Grid item xs={12}>
-            <Typography variant="h2" id="project-header">
+            <Typography id="projects" variant="h2">
               Projects
             </Typography>
           </Grid>
+          <Grid item xs={12}>
+            <Typography variant="body1">This is a WIP.</Typography>
+          </Grid>
         </Grid>
-      </Container>
-      <ContactForm></ContactForm>
+        <Grid container item xs={12}>
+          <ContactForm></ContactForm>
+        </Grid>
+      </Grid>
     </Layout>
   )
 }

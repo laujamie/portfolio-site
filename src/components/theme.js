@@ -8,6 +8,7 @@ const baseTheme = createMuiTheme({
     secondary: amber,
   },
   typography: {
+    fontFamily: "'Nunito', sans-serif",
     h1: {
       fontFamily: "'Nunuto', sans-serif",
       fontSize: "3.5rem",
@@ -15,7 +16,16 @@ const baseTheme = createMuiTheme({
       letterSpacing: "-0.045em",
     },
     h2: {
+      fontFamily: "'Nunito', sans-serif",
       fontSize: "3rem",
+      fontWeight: "400",
+      latterSpacing: "-0.045em",
+    },
+    body1: {
+      fontFamily: "'Nunito', sans-serif",
+      fontSize: "1.4rem",
+      fontWeight: "300",
+      letterSpacing: "-0.01875em",
     },
   },
   overrides: {
