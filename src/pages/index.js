@@ -1,5 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { Button, Grid, Typography } from "@material-ui/core"
 import GithubIcon from "../components/github"
 import LinkedinIcon from "../components/linkedin"
@@ -11,14 +10,14 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO lang="en" title="Home" />
-      <Grid container spacing={3} id="home">
+      <Grid container spacing={5} id="home">
         <Grid
           container
           item
           xs={12}
           alignItems="center"
           alignContent="center"
-          spacing={1}
+          spacing={2}
           id="landing"
         >
           <Grid item xs={12}>
@@ -89,7 +88,7 @@ const IndexPage = props => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container item xs={12}>
+        <Grid container item xs={12} spacing={1}>
           <Grid item xs={12}>
             <Typography id="projects" variant="h2">
               Projects

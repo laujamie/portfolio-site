@@ -3,11 +3,10 @@ import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
-import Paper from "@material-ui/core/Paper"
-import { makeStyles } from "@material-ui/core/styles"
+import { withStyles } from "@material-ui/core/styles"
 import useContactForm from "../libs/use-contact-form"
 
-const useStyles = makeStyles(theme => ({
+const styles = theme => ({
   root: {
     "& .MuiTextField-root": {
       marginTop: theme.spacing(1),
@@ -17,7 +16,7 @@ const useStyles = makeStyles(theme => ({
       marginRight: theme.spacing(1),
     },
   },
-}))
+})
 
 const ContactForm = props => {
   const {
@@ -28,7 +27,7 @@ const ContactForm = props => {
     handleClearForm,
   } = useContactForm()
 
-  const classes = useStyles()
+  const { classes } = props
 
   return (
     <Grid container spacing={1}>
@@ -100,4 +99,4 @@ const ContactForm = props => {
   )
 }
 
-export default ContactForm
+export default withStyles(styles)(ContactForm)
