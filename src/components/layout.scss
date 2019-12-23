@@ -49,3 +49,15 @@ div {
     margin: 0 0.5rem;
   }
 }
+
+form {
+  &.contact {
+    .MuiTextField-root {
+      margin-bottom: 1vh;
+    }
+
+    .MuiButton-root {
+      margin-right: 1vw;
+    }
+  }
+}

@@ -4,20 +4,7 @@ import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
-import { withStyles } from "@material-ui/core/styles"
 import useContactForm from "../libs/use-contact-form"
-
-const styles = theme => ({
-  root: {
-    "& .MuiTextField-root": {
-      marginTop: theme.spacing(1),
-      marginBottom: theme.spacing(1),
-    },
-    "& .MuiButton-root": {
-      marginRight: theme.spacing(1),
-    },
-  },
-})
 
 const ContactForm = props => {
   const {
@@ -28,8 +15,6 @@ const ContactForm = props => {
     handleClearForm,
   } = useContactForm()
 
-  const { classes } = props
-
   return (
     <Grid container spacing={1}>
       <Grid item xs={12}>
@@ -38,11 +23,7 @@ const ContactForm = props => {
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        <form
-          className={classes.root}
-          onSubmit={handleSubmit}
-          autoComplete="off"
-        >
+        <form className="contact" onSubmit={handleSubmit} autoComplete="off">
           <TextField
             id="standard-full-width"
             fullWidth
@@ -100,8 +81,4 @@ const ContactForm = props => {
   )
 }
 
-ContactForm.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withStyles(styles)(ContactForm)
+export default ContactForm
