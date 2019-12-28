@@ -41,6 +41,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: "GTM-THGBFZW",
+        anonymize: "true",
       },
     },
     `gatsby-plugin-sitemap`,
