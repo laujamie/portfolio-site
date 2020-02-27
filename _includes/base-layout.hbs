@@ -5,24 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Jamie Lau</title>
-    <description>{{ description }}</description>
+    <meta name="description" content="{{description}}">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
     {{!-- Navbar --}}
-    <header>
+    <header class="header">
+        <h1 class="logo"><a href="/">Jamie Lau</a></h1>
         <ul class="navbar">
-            <li><a href="/">Jamie Lau</a></li>
-            <li></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
         </ul>
     </header>
     <main>
         {{{ content }}}
     </main>
     <footer>
-
+        <p>Powered by JAMStack.</p>
     </footer>
+
+    <script src="https://kit.fontawesome.com/fe7d33d927.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

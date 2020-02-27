@@ -1,11 +1,45 @@
 body {
-  font-family: Verdana;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
 }
 
-ul .navbar {
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 4em;
+  line-height: 1.75em;
+}
+
+h1.logo a,
+ul.navbar li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #232430;
+}
+
+ul.navbar li {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+ul.navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #1ad8cc;
+}
+
+h1.logo {
+  font-size: 1.75em;
+  margin: 0;
+}
+
+main {
+  background: #efefef;
+}
+
+footer {
+  background: #1b1b1b;
+  color: white;
+  margin: 0;
+  padding: 1em 4em;
 }
