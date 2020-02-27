@@ -6,6 +6,13 @@
   "author": "laujamie <36782341+laujamie@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "sass": "^1.26.1"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy",
+    "sass": "sass --style=compressed scss/styles.scss _includes/css/styles.css"
   }
 }
