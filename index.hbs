@@ -19,11 +19,13 @@ pagination:
     </a>
 </div>
 <div class="projects">
-    <h1 class="section-header">Projects</h1>
+    <h1 class="section-header">My Work</h1>
     {{#each projects as | project |}}
-        <div class="card">
-            <h1>{{project.data.title}}</h1>
-            <p>{{project.data.date}}</p>
-        </div>
+        <a class="card-link" href="{{project.url}}">
+            <div class="card">
+                <h1>{{project.data.title}}</h1>
+                <h2>{{project.data.date}}</h2>
+            </div>
+        </a>
     {{/each}}
 </div>
