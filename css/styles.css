@@ -9,6 +9,11 @@ body {
   padding: 1em 4em;
   line-height: 1.75em;
   background: #f9f9f9;
+  -webkit-box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
 }
 
 h1.logo a,

@@ -17,11 +17,12 @@ h2 {
 a.icon {
   text-decoration: none;
   color: #515260;
+  margin-right: 0.75em;
 }
 
 a.icon:hover {
-  color: black;
-  transition: 1s linear;
+  color: #232430;
+  transition: 0.5s linear;
 }
 
 .projects {
@@ -37,6 +38,9 @@ a.icon:hover {
   padding: 2em;
   background: #efefef;
   margin: 1em 0;
+  -moz-box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
+  -webkit-box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
 }
 
 .card h1 {
