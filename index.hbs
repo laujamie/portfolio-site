@@ -2,15 +2,28 @@
 layout: base-layout.hbs
 title: Home
 description: Hi, I'm Jamie and I'm a student and software developer.
+pagination:
+  data: collections.project
+  size: 5
+  alias: projects
 ---
 <link rel="stylesheet" type="text/css" href="/css/index.css">
 <div class="hero">
     <h1>Hi, my name is Jamie</h1>
-    <h2>I'm a student and software developer</h2>
-    <a href="https://github.com/laujamie" class="icon" target="_blank" rel="noreferrer nofollow">
+    <h2>I'm a student with a passion for software development</h2>
+    <a href="https://github.com/laujamie" class="icon" target="_blank" rel="noopener">
         <i class="fab fa-github fa-2x"></i>
     </a>
-    <a href="https://linkedin.com/in/laujamie5" class="icon" target="_blank" rel="noreferrer nofollow">
+    <a href="https://linkedin.com/in/laujamie5" class="icon" target="_blank" rel="noopener">
         <i class="fab fa-linkedin fa-2x"></i>
     </a>
+</div>
+<div class="projects">
+    <h1 class="section-header">Projects</h1>
+    {{#each projects as | project |}}
+        <div class="card">
+            <h1>{{project.data.title}}</h1>
+            <p>{{project.data.date}}</p>
+        </div>
+    {{/each}}
 </div>
