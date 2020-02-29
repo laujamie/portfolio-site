@@ -1,7 +1,9 @@
 const fs = require("fs")
+const Terser = require("terser")
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css")
+  eleventyConfig.addPassthroughCopy("assets")
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
@@ -18,5 +20,15 @@ module.exports = function(eleventyConfig) {
         })
       },
     },
+  })
+
+  eleventyConfig.addFilter("jsmin", function(code) {
+    let minified = Terser.minify(code)
+    if (minified.error) {
+      console.log("Terser error: ", minfied.error)
+      return code
+    }
+
+    return minified.code
   })
 }
