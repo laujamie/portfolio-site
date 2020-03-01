@@ -1,5 +1,4 @@
 const fs = require("fs")
-const Terser = require("terser")
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css")
@@ -20,15 +19,5 @@ module.exports = function(eleventyConfig) {
         })
       },
     },
-  })
-
-  eleventyConfig.addFilter("jsmin", function(code) {
-    let minified = Terser.minify(code)
-    if (minified.error) {
-      console.log("Terser error: ", minfied.error)
-      return code
-    }
-
-    return minified.code
   })
 }
