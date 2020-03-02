@@ -13,10 +13,13 @@
 <body>
     <header class="header">
         <h1 class="logo"><a href="/">Jamie Lau</a></h1>
+        <div class="menu-toggle">
+            <p style="margin: 0">Menu</p>
+        </div>
         <ul class="navbar">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact-me">Contact Me</a></li>
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/about">About</a></li>
+            <li class="nav-item"><a href="/contact-me">Contact Me</a></li>
         </ul>
     </header>
     <main>
@@ -25,9 +28,13 @@
     <footer>
         <p>&#169; 2020 Jamie Lau</p>
         <p>Powered by <a href="https://11ty.dev" target="_blank" rel="noopener">Eleventy</a>.</p>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/fe7d33d927.js" crossorigin="anonymous"></script>
+    </footer>    
 </body>
+
+<script src="https://kit.fontawesome.com/fe7d33d927.js" crossorigin="anonymous"></script>
+<script>
+    function toggle() {document.querySelectorAll('.nav-item').forEach(nav => nav.classList.toggle('nav-show'))}
+    document.querySelector('div.menu-toggle').addEventListener('click', toggle)
+</script>
 
 </html>

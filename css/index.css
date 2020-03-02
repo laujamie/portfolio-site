@@ -59,3 +59,13 @@ a.icon:hover {
   text-decoration: none;
   color: inherit;
 }
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding: 6em 2em;
+  }
+
+  .projects {
+    padding: 1em 2em;
+  }
+}
