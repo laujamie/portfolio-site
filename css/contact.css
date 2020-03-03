@@ -12,6 +12,7 @@ input[type="text"] {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  font-family: Montserrat, "Segoe UI", sans-serif;
 }
 
 input[type="submit"] {
