@@ -24,6 +24,10 @@ body {
   justify-content: space-between;
 }
 
+.container {
+  padding: 1em 4em;
+}
+
 h1.logo a,
 ul.navbar li a {
   text-decoration: none;
@@ -78,6 +82,21 @@ footer a {
   color: #232430;
 }
 
+.card {
+  padding: 2em;
+  background: #efefef;
+  margin: 1em 0;
+  -moz-box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
+  -webkit-box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
+}
+
+.card h1 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 0.25em;
+}
+
 @media only screen and (max-width: 768px) {
   footer {
     padding: 1em 2em;
@@ -104,5 +123,13 @@ footer a {
   .nav-show {
     display: flex;
     margin-top: 1em;
+  }
+
+  .container {
+    padding: 1em 2em;
+  }
+
+  .footer-end {
+    line-height: 1.4em;
   }
 }

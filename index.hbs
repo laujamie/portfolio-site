@@ -8,7 +8,7 @@ pagination:
   alias: projects
 ---
 <link rel="stylesheet" type="text/css" href="/css/index.css">
-<div class="hero">
+<div class="container hero">
     <h1>Hi, my name is Jamie</h1>
     <h2>I'm a student with a passion for software development</h2>
     <a href="https://github.com/laujamie" aria-label="github" class="icon" target="_blank" rel="noopener">
@@ -18,7 +18,7 @@ pagination:
         <i class="fab fa-linkedin fa-2x" aria-label="linkedin-icon"></i>
     </a>
 </div>
-<div class="projects">
+<div class="container projects">
     <h1 class="section-header">My Work</h1>
     {{#each projects as | project |}}
         <a class="card-link" href="{{project.url}}">

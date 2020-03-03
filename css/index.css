@@ -1,5 +1,6 @@
 .hero {
-  padding: 8em 4em;
+  padding-top: 8em;
+  padding-bottom: 8em;
 }
 
 h1 {
@@ -26,27 +27,11 @@ a.icon:hover {
 }
 
 .projects {
-  padding: 1em 4em;
   background: white;
 }
 
 .projects h1.section-header {
   color: #232430;
-}
-
-.card {
-  padding: 2em;
-  background: #efefef;
-  margin: 1em 0;
-  -moz-box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
-  -webkit-box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
-  box-shadow: 0.2em 0.2em 0.2em 0.2em #ccc;
-}
-
-.card h1 {
-  font-size: 1.5em;
-  margin: 0;
-  margin-bottom: 0.25em;
 }
 
 .card h2 {
@@ -58,14 +43,4 @@ a.icon:hover {
 .card-link {
   text-decoration: none;
   color: inherit;
-}
-
-@media only screen and (max-width: 768px) {
-  .hero {
-    padding: 6em 2em;
-  }
-
-  .projects {
-    padding: 1em 2em;
-  }
 }
