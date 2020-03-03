@@ -1,7 +1,18 @@
 ---
 layout: base-layout.hbs
 ---
-<article class="project" style="padding: 1em 4em">
-    <h1>{{ title }}</h1>
+<article class="container project">
+    <h1 style="margin: 0; padding: 0;">{{ title }}</h1>
+    <p style="margin: 0; padding: 0; margin-bottom: 1em; margin-top: 0.2em; color: #232430">
+    {{#each technologies as | technology |}}
+        {{technology}}
+    {{/each}}
+    </p>
+    {{#if image}}
+        <img src="{{image}}" alt="{{title}} image" class="header-img">
+    {{/if}}
+    {{#if source}}
+        <a href="{{source}}" class="button github"><i class="fab fa-github"></i> Source</a>
+    {{/if}}
     {{{ content }}}
 </article>

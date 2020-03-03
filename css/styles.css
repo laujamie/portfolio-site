@@ -97,6 +97,35 @@ footer a {
   margin-bottom: 0.25em;
 }
 
+img.header-img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+  padding: 0.7em 1em;
+}
+
+a.button {
+  text-decoration: none;
+  padding: 0.7em 1em;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: auto;
+}
+
+a.github {
+}
+
 @media only screen and (max-width: 768px) {
   footer {
     padding: 1em 2em;
