@@ -1,0 +1,25 @@
+.card {
+  background: white;
+  padding: 1em;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+  background-color: #232430;
+  color: white;
+  padding: 0.7em 1em;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+}
