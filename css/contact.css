@@ -21,6 +21,7 @@ input[type="submit"] {
   background-color: #232430;
   color: white;
   padding: 0.7em 1em;
+  font-family: Montserrat, "Segoe UI", sans-serif;
 }
 
 input[type="submit"]:hover {
