@@ -1,6 +1,6 @@
 # Portfolio Site
 
-Portfolio site for [https://www.github.com/laujamie](@laujamie) powered by Eleventy and Handlebars.
+Portfolio site for [@laujamie](https://github.com/laujamie) powered by Eleventy and Handlebars.
 
 ## Usage
 
