@@ -1,7 +1,7 @@
 const fs = require("fs")
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("css")
+  eleventyConfig.addPassthroughCopy("src/css")
   eleventyConfig.addPassthroughCopy("assets")
 
   eleventyConfig.setBrowserSyncConfig({
@@ -20,4 +20,7 @@ module.exports = function(eleventyConfig) {
       },
     },
   })
+  return {
+    dir: { input: "src", output: "_site" },
+  }
 }
