@@ -19,6 +19,7 @@ a.icon {
   text-decoration: none;
   color: #515260;
   margin-right: 0.75em;
+  display: inline-block;
 }
 
 a.icon:hover {
@@ -43,4 +44,8 @@ a.icon:hover {
 .card-link {
   text-decoration: none;
   color: inherit;
+}
+
+div a.resume {
+  padding: 0.5em 1em;
 }
