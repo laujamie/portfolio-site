@@ -113,7 +113,7 @@ input[type="submit"] {
 a.button {
   text-decoration: none;
   padding: 0.7em 1em;
-  background: black;
+  background-color: black;
   color: white;
   cursor: pointer;
   border: none;
@@ -121,6 +121,8 @@ a.button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   height: auto;
+  display: inline-block;
+  border-radius: 0.5em;
 }
 
 @media only screen and (max-width: 768px) {
