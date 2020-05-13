@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+title: Latest Blog Posts
 ---
 
 ## Latest Blog Posts
