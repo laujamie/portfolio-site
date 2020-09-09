@@ -6,7 +6,7 @@ title: Latest Blog Posts
 <section class="text-gray-700 body-font overflow-hidden">
   <div class="container px-5 py-24 mx-auto">
     <div class="-my-8">
-      {% for post in collections.blog %}
+      {% for post in collections.blog | reverse %}
       <div class="py-8 flex flex-wrap md:flex-no-wrap">
         <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
           <span class="tracking-widest font-medium title-font text-gray-900"
@@ -22,11 +22,10 @@ title: Latest Blog Posts
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
             {{ post.data.title }}
           </h2>
-          <p class="leading-relaxed">Lorem Ipsum</p>
           <a
-            class="text-indigo-500 inline-flex items-center mt-4"
+            class="text-indigo-500 inline-flex items-center mt-2"
             href="{{ post.url | url }}"
-            >Learn More
+            >Read
             <svg
               class="w-4 h-4 ml-2"
               viewBox="0 0 24 24"
