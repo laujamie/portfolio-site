@@ -28,7 +28,7 @@ const contactHandler = async (event, context) => {
   }
   return {
     statusCode: 200,
-    body: process.env.NODE_ENV,
+    body: JSON.stringify('Your message has been sent successfully!'),
   };
 };
 
