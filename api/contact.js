@@ -17,8 +17,8 @@ const contactHandler = async (event, context) => {
       email,
       email,
       sanitizedReplyTo,
-      `New Message from jamielau.me`,
-      `Sender: ${sanitizedName}\n\nEmail: ${sanitizedReplyTo}\n\n${sanitizedMessage}`
+      `New Message from jamielau.me from ${sanitizedName}`,
+      sanitizedMessage
     );
   } catch (e) {
     return {
