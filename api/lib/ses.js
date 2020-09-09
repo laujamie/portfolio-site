@@ -3,8 +3,8 @@ const { SES, Credentials } = require('aws-sdk');
 const sesClient = new SES({
   region: process.env.AWS_REGION,
   credentials: new Credentials(
-    process.env.AWS_ACCESS_KEY_ID,
-    process.env.AWS_SECRET_ACCESS_KEY
+    process.env.AWS_LAMBDA_ACCESS_KEY_ID,
+    process.env.AWS_LAMBDA_SECRET_ACCESS_KEY
   ),
 });
 
