@@ -30,7 +30,8 @@
     "serve": "npm-run-all clean --parallel serve:*",
     "build:webpack": "webpack --mode production",
     "build:eleventy": "ELEVENTY_ENV=production eleventy",
-    "build": "run-s clean build:*"
+    "build": "run-s clean build:*",
+    "dev": "netlify dev"
   },
   "dependencies": {
     "@middy/core": "^1.4.0",
