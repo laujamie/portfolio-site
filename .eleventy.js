@@ -5,8 +5,8 @@ const htmlmin = require('html-minifier');
 moment.locale('en');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('src/static');
-  eleventyConfig.addPassthroughCopy('src/admin/config.yml');
+  eleventyConfig.addPassthroughCopy('src/website/static');
+  eleventyConfig.addPassthroughCopy('src/website/admin/config.yml');
 
   eleventyConfig.addNunjucksAsyncFilter('jsmin', async (code, callback) => {
     try {
