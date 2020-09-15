@@ -5,12 +5,15 @@ title: Latest Blog Posts
 
 <section class="text-gray-700 body-font overflow-hidden">
   <div class="container px-5 py-24 mx-auto">
+    <h2 class="text-3xl font-semibold mb-6 text-black">Blog</h2>
     <div class="-my-8">
       {% for post in collections.blog | reverse %}
       <div class="py-8 flex flex-wrap md:flex-no-wrap">
         <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-          <span class="tracking-widest font-medium title-font text-gray-900"
-            >CATEGORY</span
+          <span
+            class="tracking-widest font-medium title-font text-gray-900 uppercase"
+            >{% if post.category %}{{ post.category }}{% else %}N/A{% endif
+            %}</span
           >
           <time
             class="mt-1 text-gray-500 text-sm"
