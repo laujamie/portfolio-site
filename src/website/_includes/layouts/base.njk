@@ -50,12 +50,7 @@
     {{ content | safe }}
     {% include "footer.njk" %}
 
-    <!-- Ignore prettier formatting to prevent breaking -->
-    <!--prettier-ignore-->
-    <script>
-      {{ mainjs | jsmin | safe }}
-    </script>
-    <!--prettier-ignore-end-->
+    <script src="/assets/main.js"></script>
 
     <!-- Only inject this code for production builds -->
     {% if site.env %}
