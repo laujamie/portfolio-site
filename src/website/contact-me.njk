@@ -3,8 +3,8 @@ title: Contact Me
 layout: layouts/base.njk
 ---
 
-{% set js %}
-  {% include "contact.js" %}
+{% set contactjs %}
+  {% include "scripts/contact.js" %}
 {% endset %}
 
 <section class="text-gray-700 body-font relative">
@@ -63,5 +63,5 @@ layout: layouts/base.njk
 </section>
 
 <script>
-  {{ js | jsmin | safe }}
+  {{ contactjs | jsmin | safe }}
 </script>
