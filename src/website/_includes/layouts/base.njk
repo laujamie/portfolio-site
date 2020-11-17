@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+{% set mainjs %} {% include "scripts/main.js" %} {% endset %}
+
+<html lang="en">
+  <head>
+    {% if site.env %}}
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), 'event': 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-THGBFZW');
+    </script>
+    <!-- End Google Tag Manager -->
+    {% endif %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% if title %}{{ title }} | {{ site.title }}{% else %}{{ site.title }}{%
+      endif %}
+    </title>
+    <meta name="description" content="{{ description or site.description }}" />
+    <link rel="canonical" href="{{ page.url }}" />
+    <meta
+      property="og:title"
+      content="{% if title %}{{ title }} | {{ site.title }}{% else %}{{
+        site.title
+      }}{% endif %}"
+    />
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta
+      property="og:description"
+      content="{{ description or site.description }}"
+    />
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% include "header.njk" %}
+    {{ content | safe }}
+    {% include "footer.njk" %}
+
+    <script src="/assets/main.js"></script>
+
+    <!-- Only inject this code for production builds -->
+    {% if site.env %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-THGBFZW"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+  </body>
+</html>
