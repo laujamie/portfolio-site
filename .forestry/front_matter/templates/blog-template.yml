@@ -39,5 +39,3 @@ fields:
     required: true
   label: Author
   description: Your name
-pages:
-- src/website/blog/redesigning-my-website-with-tailwind.md
