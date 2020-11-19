@@ -1,4 +1,41 @@
 ---
 label: Blog Template
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Title of your blog post
+- name: date
+  type: datetime
+  label: Date
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  description: Publish date of the article
+- name: tags
+  type: text
+  config:
+    required: true
+  label: Tags
+  description: Tags to add to the blog post
+  default: blog
+  hidden: true
+- name: layout
+  type: text
+  config:
+    required: true
+  label: Layout
+  default: layouts/blog-post.njk
+  description: Layout file (.njk) to use when generating the blog post
+  hidden: true
+- name: author
+  type: text
+  config:
+    required: true
+  label: Author
+  description: Your name
