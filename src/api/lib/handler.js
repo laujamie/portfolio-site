@@ -9,7 +9,9 @@ const httpSecurityHeaders = require("@middy/http-security-headers");
  * @returns Handler with middleware.
  */
 function createHandler(handler) {
-  return middy(handler).use(cors()).use(httpSecurityHeaders());
+  h = middy(handler);
+  h.use(cors()).use(httpSecurityHeaders());
+  return h;
 }
 
 module.exports = createHandler;
