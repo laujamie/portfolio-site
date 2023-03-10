@@ -1,0 +1,28 @@
+---
+label: Project Template
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: date
+  label: date
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: source
+  label: source
+- type: text
+  name: website
+  label: website
+- type: list
+  name: technologies
+  label: technologies
+- type: file
+  name: image
+  label: image
