@@ -70,3 +70,17 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
