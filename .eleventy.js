@@ -39,6 +39,10 @@ module.exports = function (eleventyConfig) {
     return moment(date).utc().format("LL");
   });
 
+  eleventyConfig.addFilter("arrayToString", (arr) => {
+    return arr.join(",");
+  });
+
   return {
     dir: { input: "src/website", output: "_site" },
   };

@@ -11,11 +11,9 @@ title: Latest Blog Posts
         <div class="py-8 flex flex-wrap md:flex-no-wrap">
           <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
             <span
-            class="tracking-widest font-medium title-font text-gray-900 uppercase"
+            class="font-medium title-font text-gray-900"
             >
-              {% if post.category %}{{ post.category }}
-              {% else %}N/A{% endif
- %}
+              {{ post.data.author }}
             </span
           >
             <time

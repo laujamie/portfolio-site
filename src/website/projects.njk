@@ -5,7 +5,7 @@ title: Latest Projects
 
 <section class="text-gray-700 body-font overflow-hidden">
   <div class="container px-5 py-24 mx-auto">
-    <h2 class="text-3xl font-semibold mb-6 text-black">Blog</h2>
+    <h2 class="text-3xl font-semibold mb-6 text-black">Projects</h2>
     <div class="-my-8">
       {% for post in collections.project | reverse %}
         <div class="py-8 flex flex-wrap md:flex-no-wrap">
@@ -13,9 +13,9 @@ title: Latest Projects
             <span
             class="tracking-widest font-medium title-font text-gray-900 uppercase"
             >
-              {% if post.category %}{{ post.category }}
-              {% else %}N/A{% endif
- %}
+              <a href="{{ post.data.source }}">
+                <i class="fab fa-github fa-lg"></i> Source
+              </a>
             </span
           >
             <time
@@ -25,13 +25,16 @@ title: Latest Projects
           >
           </div>
           <div class="md:flex-grow">
-            <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+            <h2 class="text-2xl font-medium text-gray-900 title-font mb-1">
               {{ post.data.title }}
             </h2>
+            <h3 class="text-gray-700 text-sm">
+              Technologies: {{ post.data.technologies | arrayToString }}
+            </h3>
             <a
             class="text-indigo-500 inline-flex items-center mt-2"
             href="{{ post.url | url }}"
-            >Read
+            >Learn More
             <svg
               class="w-4 h-4 ml-2"
               viewBox="0 0 24 24"
