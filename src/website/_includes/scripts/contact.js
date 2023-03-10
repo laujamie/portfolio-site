@@ -1,4 +1,4 @@
-const form = document.querySelector('form');
+const form = document.querySelector("form");
 
 form.onsubmit = (e) => {
   e.preventDefault();
@@ -11,10 +11,10 @@ form.onsubmit = (e) => {
   const url = `/api/contact?${queryParams.toString()}`;
 
   const response = fetch(url, {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
+      Accept: "application/json",
+      "Content-Type": "application/json",
     },
   })
     .then((response) => form.reset())

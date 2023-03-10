@@ -1,11 +1,11 @@
-const createHandler = require('./lib/handler');
-const { sendEmail } = require('./lib/ses');
-const { sanitizeInput, validateEmail } = require('./lib/input');
+const createHandler = require("./lib/handler");
+const { sendEmail } = require("./lib/ses");
+const { sanitizeInput, validateEmail } = require("./lib/input");
 
 const contactHandler = async (event, context) => {
   try {
     const email = process.env.CONTACT_EMAIL;
-    const { name, message, replyTo } = event['queryStringParameters'];
+    const { name, message, replyTo } = event["queryStringParameters"];
 
     const sanitizedName = sanitizeInput(name);
     const sanitizedMessage = sanitizeInput(message);
@@ -28,7 +28,7 @@ const contactHandler = async (event, context) => {
   }
   return {
     statusCode: 200,
-    body: JSON.stringify('Your message has been sent successfully!'),
+    body: JSON.stringify("Your message has been sent successfully!"),
   };
 };
 

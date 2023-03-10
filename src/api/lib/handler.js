@@ -1,6 +1,6 @@
-const middy = require('@middy/core');
-const cors = require('@middy/http-cors');
-const httpSecurityHeaders = require('@middy/http-security-headers');
+const middy = require("@middy/core");
+const cors = require("@middy/http-cors");
+const httpSecurityHeaders = require("@middy/http-security-headers");
 
 /**
  * Creates a Lambda handler with the necessary middlewares.

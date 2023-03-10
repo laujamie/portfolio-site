@@ -1,4 +1,4 @@
-const { SES, Credentials } = require('aws-sdk');
+const { SES, Credentials } = require("aws-sdk");
 
 const sesClient = new SES({
   region: process.env.AWS_REGION,
@@ -18,12 +18,12 @@ async function sendEmail(to, sender, replyTo, subject, message) {
     Message: {
       Body: {
         Html: {
-          Charset: 'UTF-8',
+          Charset: "UTF-8",
           Data: message,
         },
       },
       Subject: {
-        Charset: 'UTF-8',
+        Charset: "UTF-8",
         Data: subject,
       },
     },

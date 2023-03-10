@@ -5,7 +5,8 @@ layout: layouts/base.njk
 <main>
   <div class="container mx-auto p-5">
     <a class="text-sm text-blue-600" href="/projects"
-      ><i class="fas fa-arrow-left mr-2"></i>Back to Projects</a
+      >
+      <i class="fas fa-arrow-left mr-2"></i>Back to Projects</a
     >
     <h1 class="text-2xl font-semibold">{{ title }}</h1>
     <h2 class="text-sm text-gray-600">Date: {{ page.date.toDateString() }}</h2>
@@ -14,14 +15,15 @@ layout: layouts/base.njk
 
     <div class="mt-4">
       {% if source %}
-      <a
+        <a
         href="{{ source }}"
         class="bg-black text-white no-underline px-4 py-2 rounded-lg"
       >
-        <i class="fab fa-github mr-2"></i> Github
+          <i class="fab fa-github mr-2"></i> Github
       </a>
-      {% endif %} {% if website %}
-      <a
+      {% endif %}
+      {% if website %}
+        <a
         href="{{ website }}"
         class="bg-indigo-500 text-white no-underline px-4 py-2 rounded-lg ml-2"
       >
