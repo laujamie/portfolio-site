@@ -21,6 +21,7 @@ const contactHandler = async (event, context) => {
       sanitizedMessage
     );
   } catch (e) {
+    console.log(e.message);
     return {
       statusCode: 500,
       body: JSON.stringify(e.message),
