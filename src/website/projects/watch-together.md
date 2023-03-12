@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/new-project.njk
 title: Watch Together
 date: May 2020
 tags: []
