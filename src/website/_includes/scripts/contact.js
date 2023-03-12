@@ -6,6 +6,7 @@ function contactForm() {
       name: "",
       replyTo: "",
       message: "",
+      subscribe: false,
     },
     loading: false,
     formMessage: "",

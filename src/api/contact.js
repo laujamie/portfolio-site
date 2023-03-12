@@ -8,7 +8,15 @@ const contactHandler = async (event, context) => {
   }
   try {
     const email = process.env.CONTACT_EMAIL;
-    const { name, message, replyTo } = JSON.parse(event.body);
+    const { name, message, replyTo, subscribe } = JSON.parse(event.body);
+
+    if (subscribe) {
+      console.log("Honeypot", event.body);
+      return {
+        statusCode: 200,
+        body: JSON.stringify("Your message has been sent successfully!"),
+      };
+    }
 
     const sanitizedName = sanitizeInput(name);
     const sanitizedMessage = sanitizeInput(message);

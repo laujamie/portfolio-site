@@ -84,3 +84,7 @@ body {
 main {
   flex-grow: 1;
 }
+
+#subscribe {
+  display: none !important;
+}
