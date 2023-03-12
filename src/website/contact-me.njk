@@ -19,7 +19,7 @@ layout: layouts/base.njk
         Let's get in touch!
       </p>
     </div>
-    <form name="contact">
+    <form name="contact" x-data="contactForm()" @submit.prevent="submitForm">
       <div class="lg:w-1/2 md:w-2/3 mx-auto">
         <div class="flex flex-wrap -m-2">
           <div class="p-2 w-1/2">
@@ -29,6 +29,7 @@ layout: layouts/base.njk
               type="text"
               name="name"
               required
+              x-model="data.name"
 />
           </div>
           <div class="p-2 w-1/2">
@@ -38,6 +39,7 @@ layout: layouts/base.njk
               type="email"
               name="replyTo"
               required
+              x-model="data.replyTo"
 />
           </div>
           <div class="p-2 w-full">
@@ -46,15 +48,20 @@ layout: layouts/base.njk
               placeholder="Message"
               name="message"
               required
+              x-model="data.message"
             ></textarea>
           </div>
           <div class="p-2 w-full">
             <button
               class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
               type="submit"
+              :disabled="loading"
             >
               Submit
             </button>
+          </div>
+          <div class="p-2 w-full">
+            <div x-text="formMessage"></div>
           </div>
         </form>
       </div>

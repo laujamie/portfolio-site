@@ -5,7 +5,7 @@ const { sanitizeInput, validateEmail } = require("./lib/input");
 const contactHandler = async (event, context) => {
   try {
     const email = process.env.CONTACT_EMAIL;
-    const { name, message, replyTo } = event["queryStringParameters"];
+    const { name, message, replyTo } = JSON.parse(event.body);
 
     const sanitizedName = sanitizeInput(name);
     const sanitizedMessage = sanitizeInput(message);

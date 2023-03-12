@@ -4,6 +4,8 @@ const htmlmin = require("html-minifier");
 
 moment.locale("en");
 
+now = String(Date.now());
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("src/website/admin/config.yml");
@@ -41,6 +43,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("arrayToString", (arr) => {
     return arr.join(",");
+  });
+
+  eleventyConfig.addShortcode("version", () => now);
+
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/alpinejs/dist/cdn.js": "./js/alpine.js",
   });
 
   return {

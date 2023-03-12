@@ -1,22 +1,46 @@
-const form = document.querySelector("form");
+const FORM_URL = "/api/contact";
 
-form.onsubmit = (e) => {
-  e.preventDefault();
-
-  const formElements = Array.from(form);
-
-  var queryParams = new URLSearchParams();
-  formElements.map((input) => queryParams.set(input.name, input.value));
-
-  const url = `/api/contact?${queryParams.toString()}`;
-
-  const response = fetch(url, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+function contactForm() {
+  return {
+    data: {
+      name: "",
+      replyTo: "",
+      message: "",
     },
-  })
-    .then((response) => form.reset())
-    .catch((e) => console.log(e));
-};
+    loading: false,
+    formMessage: "",
+    submitForm() {
+      this.formMessage = "";
+      this.loading = true;
+      var queryParams = new URLSearchParams();
+      Object.entries(this.data).map(([name, value]) =>
+        queryParams.set(name, value)
+      );
+
+      fetch(FORM_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          body: JSON.stringify(this.data),
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            this.formMessage = "Form submitted successfully";
+            this.data.name = "";
+            this.data.replyTo = "";
+            this.data.message = "";
+          } else {
+            throw new Error("Something went wrong");
+          }
+        })
+        .catch(() => {
+          this.formMessage = "Something went wrong";
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+    },
+  };
+}
