@@ -22,8 +22,8 @@ function contactForm() {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
-          body: JSON.stringify(this.data),
         },
+        body: JSON.stringify(this.data),
       })
         .then((response) => {
           if (response.ok) {

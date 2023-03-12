@@ -29,7 +29,7 @@ async function sendEmail(to, sender, replyTo, subject, message) {
     },
   };
 
-  return await sesClient.sendEmail(params).promise();
+  return sesClient.sendEmail(params).promise();
 }
 
 exports.sendEmail = sendEmail;

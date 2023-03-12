@@ -3,6 +3,9 @@ const { sendEmail } = require("./lib/ses");
 const { sanitizeInput, validateEmail } = require("./lib/input");
 
 const contactHandler = async (event, context) => {
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" };
+  }
   try {
     const email = process.env.CONTACT_EMAIL;
     const { name, message, replyTo } = JSON.parse(event.body);
@@ -21,7 +24,6 @@ const contactHandler = async (event, context) => {
       sanitizedMessage
     );
   } catch (e) {
-    console.log(e.message);
     return {
       statusCode: 500,
       body: JSON.stringify(e.message),
