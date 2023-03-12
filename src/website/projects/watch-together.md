@@ -2,7 +2,7 @@
 layout: layouts/new-project.njk
 title: Watch Together
 date: 2020-05
-tags: []
+tags: ["project"]
 source: https://github.com/laujamie/watch-together/commits/master
 website: ""
 technologies:
