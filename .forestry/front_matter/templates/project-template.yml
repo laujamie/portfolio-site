@@ -29,4 +29,5 @@ fields:
   name: image
   label: image
 pages:
+- src/website/projects/sorting-visualizer.md
 - src/website/projects/watch-together.md
