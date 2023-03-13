@@ -1,6 +1,7 @@
 const FORM_URL = "/api/contact";
 
 function contactForm() {
+  const toast = document.getElementById("toast");
   return {
     data: {
       name: "",
@@ -28,16 +29,32 @@ function contactForm() {
       })
         .then((response) => {
           if (response.ok) {
-            this.formMessage = "Form submitted successfully";
             this.data.name = "";
             this.data.replyTo = "";
             this.data.message = "";
+            toast.dispatchEvent(
+              new CustomEvent("toast", {
+                detail: {
+                  text: "Your message was submitted successfully.",
+                  isError: false,
+                },
+                bubbles: true,
+              })
+            );
           } else {
             throw new Error("Something went wrong");
           }
         })
         .catch(() => {
-          this.formMessage = "Something went wrong";
+          toast.dispatchEvent(
+            new CustomEvent("toast", {
+              detail: {
+                text: "There was an issue submitting your request.",
+                isError: true,
+              },
+              bubbles: true,
+            })
+          );
         })
         .finally(() => {
           this.loading = false;

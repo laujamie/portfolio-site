@@ -10,6 +10,7 @@ const contactHandler = async (event, context) => {
     const email = process.env.CONTACT_EMAIL;
     const { name, message, replyTo, subscribe } = JSON.parse(event.body);
 
+    // Catch for honeypot requests
     if (subscribe) {
       console.log("Honeypot", event.body);
       return {

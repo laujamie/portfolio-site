@@ -51,6 +51,7 @@ layout: layouts/base.njk
               x-model="data.message"
             ></textarea>
           </div>
+          <!-- Honeypot input -->
           <input name="subscribe" type="checkbox" id="subscribe" value="1" tabindex="-1" autocomplete="off" x-model="data.subscribe"/>
           <div class="p-2 w-full">
             <button
@@ -69,6 +70,38 @@ layout: layouts/base.njk
     </div>
   </div>
 </section>
+
+<!-- respond to toast event, by pussing the message to the toast array and setting timeout for its removal -->
+<div 
+  x-data="{ toasts: [], id: 0 }" 
+  @toast.window="toasts.push({ id: ++id, text: $event.detail.text, isError: $event.detail.isError }); setTimeout(() => toasts.shift(), 5000)" 
+  class="fixed bottom-4 left-1/2 -translate-x-1/2"
+  id="toast"
+>
+  <!-- loop through toast array and display toast message if the toasts array has at least one message -->
+  <template 
+    x-for="toast in toasts"
+    :key="toast.id"
+    x-if="toasts.length >= 1"
+  >
+    <div class="flex flex-wrap flex-start" x-show="toast != null && toast.text != null">
+      <div 
+        class="ml-auto flex p-2 rounded shadow-lg" 
+        :class="{ 'bg-emerald-200': !toast.isError, 'text-emerald-600': !toast.isError, 'bg-red-200': toast.isError, 'text-red-600': toast.isError }"
+      >
+        <!-- display toast message -->
+        <div x-text="toast.text"></div>
+        <!-- close toast on click -->
+        <button 
+          class="ml-4 text-xs cursor-pointer" 
+          @click="let id = toast.id; toasts = toasts.filter(toast => toast.id !== id);"
+        >
+          &#10005;
+        </button>
+      </div>
+    </div>
+  </template>
+</div>
 
 <script>
   {{ contactjs | jsmin | safe }}
