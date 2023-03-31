@@ -20,6 +20,10 @@ const stringifyAttributes = (attributeMap) => {
     .join(" ");
 };
 
+const cleanFilePath = (src) => {
+  return src.replace(/^\/+/g, "");
+};
+
 const imageShortcode = async (
   src,
   alt,
@@ -28,7 +32,8 @@ const imageShortcode = async (
   formats = ["webp", "jpeg"],
   sizes = "100vw"
 ) => {
-  const imageMetadata = await Image(src, {
+  const cleanSrc = cleanFilePath(src);
+  const imageMetadata = await Image(cleanSrc, {
     widths: [...widths, null],
     formats: [...formats, null],
     outputDir: "_site/assets/images",
