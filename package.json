@@ -41,6 +41,9 @@
     "@middy/core": "^4.2.6",
     "@middy/http-cors": "^4.2.6",
     "@middy/http-security-headers": "^4.2.6",
+    "@netlify/functions": "^1.4.0",
+    "@types/node": "^18.15.11",
+    "@types/validator": "^13.7.14",
     "terser": "^5.16.6",
     "validator": "^13.9.0"
   }

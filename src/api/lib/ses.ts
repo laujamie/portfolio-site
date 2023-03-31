@@ -1,14 +1,20 @@
-const { SES, Credentials } = require("aws-sdk");
+import { SES, Credentials } from "aws-sdk";
 
 const sesClient = new SES({
   region: process.env.AWS_REGION,
   credentials: new Credentials(
-    process.env.AWS_LAMBDA_ACCESS_KEY_ID,
-    process.env.AWS_LAMBDA_SECRET_ACCESS_KEY
+    process.env.AWS_LAMBDA_ACCESS_KEY_ID || "",
+    process.env.AWS_LAMBDA_SECRET_ACCESS_KEY || ""
   ),
 });
 
-async function sendEmail(to, sender, replyTo, subject, message) {
+export async function sendEmail(
+  to: string,
+  sender: string,
+  replyTo: string,
+  subject: string,
+  message: string
+) {
   const params = {
     Source: sender,
     ReplyToAddresses: [replyTo],
@@ -31,5 +37,3 @@ async function sendEmail(to, sender, replyTo, subject, message) {
 
   return sesClient.sendEmail(params).promise();
 }
-
-exports.sendEmail = sendEmail;
