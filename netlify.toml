@@ -1,5 +1,5 @@
 [build]
-    command = "npm run build"
+    command = "pnpm run build"
     functions = "src/api"
     publish = "_site"
 [[redirects]]
@@ -7,6 +7,6 @@
     to = "/.netlify/functions/:splat"
     status = 200
 [dev]
-    command = "yarn serve"
+    command = "pnpm serve"
     port = 3000
     publish = "_site"
