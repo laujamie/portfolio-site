@@ -4,6 +4,8 @@ const htmlmin = require("html-minifier");
 const Image = require("@11ty/eleventy-img");
 const outdent = require("outdent");
 
+const site = require("./src/website/_data/site");
+
 moment.locale("en");
 
 now = String(Date.now());
@@ -89,6 +91,14 @@ const imageShortcode = async (
   return outdent`${picture}`;
 };
 
+/**
+ * Prefixes the given URL with the site's base URL.
+ * @param {string} url
+ */
+const toAbsoluteUrl = (url) => {
+  return new URL(url, site.baseUrl).href;
+};
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("src/website/admin/config.yml");
@@ -127,6 +137,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("arrayToString", (arr) => {
     return arr.join(",");
   });
+
+  eleventyConfig.addFilter("toAbsoluteUrl", toAbsoluteUrl);
 
   eleventyConfig.addShortcode("version", () => now);
 

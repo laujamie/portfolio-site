@@ -13,14 +13,14 @@
       {% endif %}
     </title>
     <meta name="description" content="{{ description or site.description }}"/>
-    <link rel="canonical" href="{{ page.url }}"/>
+    <link rel="canonical" href="{{ page.url | toAbsoluteUrl }}"/>
     <meta
       property="og:title"
       content="{% if title %}{{ title }} | {{ site.title }}{% else %}{{
         site.title
       }}{% endif %}"
 />
-    <meta property="og:url" content="{{ page.url }}"/>
+    <meta property="og:url" content="{{ page.url | toAbsoluteUrl }}"/>
     <meta
       property="og:description"
       content="{{ description or site.description }}"
@@ -31,7 +31,6 @@
       rel="stylesheet"
 />
     <script src="/js/alpine.js?v={% version %}" defer></script>
-    <link rel="canonical" href="https://jamielau.me"/>
   </head>
   <body>
     {% include "header.njk" %}
