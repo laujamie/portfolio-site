@@ -6,8 +6,8 @@ module.exports = {
   title: "Jamie Lau",
   baseUrl,
   description:
-    "Jamie Lau is a software engineer currently working as a software engineer at Embark Trucks, " +
-    "who is currently helping to build out self-driving trucks.",
+    "Jamie Lau is a software engineer, based in Toronto, Canada, working on self-driving trucks at Embark Trucks. " +
+    "Jamie specializes in developing full-stack web applications using Go, React, TypeScript, Python, and C++.",
   env: process.env.ELEVENTY_ENV === "production",
   linkedin: "https://linkedin.com/in/laujamie5",
   github: "https://github.com/laujamie",
