@@ -39,22 +39,6 @@
     </main>
     {% include "footer.njk" %}
 
-    <script src="/assets/main.js"></script>
-
-    <!-- Only inject this code for production builds -->
-    {% if site.env %}
-      <!-- Google Tag Manager (noscript) -->
-      <noscript
-      >
-        <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-THGBFZW"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    >
-      </noscript>
-      <!-- End Google Tag Manager (noscript) -->
-    {% endif %}
+    <script src="/assets/main.js" defer></script>
   </body>
 </html>
