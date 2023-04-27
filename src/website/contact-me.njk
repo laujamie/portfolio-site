@@ -62,6 +62,7 @@ layout: layouts/base.njk
               Submit
             </button>
           </div>
+          <div class="cf-turnstile" data-sitekey="{{ site.turnstileKey }}" data-callback="javascriptCallback"></div>
           <div class="p-2 w-full">
             <div x-text="formMessage"></div>
           </div>

@@ -32,7 +32,7 @@
 />
     <script src="/js/alpine.js?v={% version %}" defer></script>
   </head>
-  <body>
+  <body class="antialiased" x-data="{ isMobileNavOpen: false }" :class="{ 'overflow-hidden': isMobileNavOpen }">
     {% include "header.njk" %}
     <main>
       {{ content | safe }}

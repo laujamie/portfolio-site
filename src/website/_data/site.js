@@ -12,4 +12,5 @@ module.exports = {
   linkedin: "https://linkedin.com/in/laujamie5",
   github: "https://github.com/laujamie",
   year: new Date().getFullYear(),
+  turnstileKey: "0x4AAAAAAADxOPVPZHY1vE2x",
 };
