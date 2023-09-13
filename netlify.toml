@@ -7,6 +7,6 @@
     to = "/.netlify/functions/:splat"
     status = 200
 [dev]
-    command = "pnpm serve"
+    command = "pnpm dev:tina"
     port = 3000
     publish = "_site"

@@ -36,6 +36,7 @@
     "build:webpack": "webpack --mode production",
     "build:eleventy": "ELEVENTY_ENV=production eleventy",
     "build": "run-s clean build:*",
+    "dev:tina": "pnpm exec tinacms dev -c \"pnpm serve\"",
     "dev": "netlify dev"
   },
   "dependencies": {
@@ -44,9 +45,11 @@
     "@middy/http-cors": "^4.2.6",
     "@middy/http-security-headers": "^4.2.6",
     "@netlify/functions": "^1.4.0",
+    "@tinacms/cli": "^1.5.7",
     "@types/node": "^18.15.11",
     "@types/validator": "^13.7.14",
     "terser": "^5.16.6",
+    "tinacms": "^1.5.0",
     "validator": "^13.9.0"
   }
 }
