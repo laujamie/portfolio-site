@@ -3,12 +3,13 @@ import { blog_templateFields } from "./templates";
 import { project_templateFields } from "./templates";
 
 // Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+const branch =
+  process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "master";
 
 export default defineConfig({
   branch,
-  clientId: "54347dca-876d-4d6a-ba5b-7f99fc5f648d", // Get this from tina.io
-  token: "4edc30533cfb7cb1eb9b13b3901be9556b12e7c5", // Get this from tina.io
+  clientId: process.env.TINA_CLIENT_ID, // Get this from tina.io
+  token: process.env.TINA_CLIENT_TOKEN, // Get this from tina.io
   client: { skip: true },
   build: {
     outputFolder: "admin",
@@ -38,6 +39,7 @@ export default defineConfig({
             description: "This is the markdown body",
             isBody: true,
           },
+          ...blog_templateFields(),
         ],
       },
       {

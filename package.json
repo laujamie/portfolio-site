@@ -35,7 +35,8 @@
     "serve": "npm-run-all clean --parallel serve:*",
     "build:webpack": "webpack --mode production",
     "build:eleventy": "ELEVENTY_ENV=production eleventy",
-    "build": "run-s clean build:*",
+    "tinacms": "tinacms build",
+    "build": "run-s clean tinacms build:*",
     "dev:tina": "pnpm exec tinacms dev -c \"pnpm serve\"",
     "dev": "netlify dev"
   },
