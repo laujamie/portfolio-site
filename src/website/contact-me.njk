@@ -6,13 +6,10 @@ layout: layouts/base.njk
 {% set contactjs %}
 {% include "scripts/contact.js" %}
 {% endset %}
-
 <section class="text-gray-700 body-font relative">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="container py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
-      <h1
-        class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
-      >
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
         Contact Me
       </h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
@@ -29,8 +26,7 @@ layout: layouts/base.njk
               type="text"
               name="name"
               required
-              x-model="data.name"
-/>
+              x-model="data.name"/>
           </div>
           <div class="p-2 w-1/2">
             <input
@@ -39,26 +35,31 @@ layout: layouts/base.njk
               type="email"
               name="replyTo"
               required
-              x-model="data.replyTo"
-/>
+              x-model="data.replyTo"/>
           </div>
           <div class="p-2 w-full">
             <textarea
-              class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block"
+              class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4
+                py-2 resize-none block"
               placeholder="Message"
               name="message"
               required
-              x-model="data.message"
-            ></textarea>
+              x-model="data.message"></textarea>
           </div>
           <!-- Honeypot input -->
-          <input name="subscribe" type="checkbox" id="subscribe" value="1" tabindex="-1" autocomplete="off" x-model="data.subscribe"/>
+          <input
+            name="subscribe"
+            type="checkbox"
+            id="subscribe"
+            value="1"
+            tabindex="-1"
+            autocomplete="off"
+            x-model="data.subscribe"/>
           <div class="p-2 w-full">
             <button
               class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
               type="submit"
-              :disabled="loading"
-            >
+              :disabled="loading">
               Submit
             </button>
           </div>
@@ -71,39 +72,31 @@ layout: layouts/base.njk
     </div>
   </div>
 </section>
-
 <!-- respond to toast event, by pussing the message to the toast array and setting timeout for its removal -->
-<div 
-  x-data="{ toasts: [], id: 0 }" 
-  @toast.window="toasts.push({ id: ++id, text: $event.detail.text, isError: $event.detail.isError }); setTimeout(() => toasts.shift(), 5000)" 
+<div
+  x-data="{ toasts: [], id: 0 }"
+  @toast.window="toasts.push({ id: ++id, text: $event.detail.text, isError: $event.detail.isError }); setTimeout(() =>
+    toasts.shift(), 5000)"
   class="fixed bottom-4 left-1/2 -translate-x-1/2"
-  id="toast"
->
+  id="toast">
   <!-- loop through toast array and display toast message if the toasts array has at least one message -->
-  <template 
-    x-for="toast in toasts"
-    :key="toast.id"
-    x-if="toasts.length >= 1"
-  >
+  <template x-for="toast in toasts" :key="toast.id" x-if="toasts.length >= 1">
     <div class="flex flex-wrap flex-start" x-show="toast != null && toast.text != null">
-      <div 
-        class="ml-auto flex p-2 rounded shadow-lg" 
-        :class="{ 'bg-emerald-200': !toast.isError, 'text-emerald-600': !toast.isError, 'bg-red-200': toast.isError, 'text-red-600': toast.isError }"
-      >
+      <div
+        class="ml-auto flex p-2 rounded shadow-lg"
+        :class="{ 'bg-emerald-200': !toast.isError, 'text-emerald-600': !toast.isError, 'bg-red-200': toast.isError,
+          'text-red-600': toast.isError }">
         <!-- display toast message -->
         <div x-text="toast.text"></div>
         <!-- close toast on click -->
-        <button 
-          class="ml-4 text-xs cursor-pointer" 
-          @click="let id = toast.id; toasts = toasts.filter(toast => toast.id !== id);"
-        >
+        <button
+          class="ml-4 text-xs cursor-pointer"
+          @click="let id = toast.id; toasts = toasts.filter(toast => toast.id !== id);">
           &#10005;
         </button>
       </div>
     </div>
   </template>
 </div>
-
 <script>
-  {{ contactjs | jsmin | safe }}
-</script>
+  {{ contactjs | jsmin | safe }}</script>
